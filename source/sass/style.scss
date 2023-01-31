@@ -1,1 +1,5 @@
-// Начните писать стили здесь
+@use "./global/bootstrap.scss";
+@use "./blocks/visually-hidden.scss";
+@use "./blocks/page.scss";
+@use "./blocks/page-body.scss";
+@use "./blocks/header-main.scss";
