@@ -3,18 +3,25 @@
 .header-main {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
-  padding: 10px 20px 17px;
   box-sizing: border-box;
+
+  @include bootstrap.tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .header-main__logo {
   position: relative;
   text-decoration: none;
   color: #111111;
-  padding-left: 90px;
+  padding: 24px 0 24px 110px;
   display: flex;
   align-items: center;
+  margin-right: 60px;
 
   @include bootstrap.tablet {
     padding-left: 72px;
@@ -36,7 +43,8 @@
 .header-main__logo::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 20px;
+  top: 12px;
   width: 34px;
   height: 38px;
   background-image: url("../img/svg/logo-mobile.svg");
@@ -57,7 +65,7 @@
 
 .header-main__logo-image {
   &--not-mobile {
-    padding-left: 7px;
+    padding-left: 6px;
   }
 
   @include bootstrap.tablet {

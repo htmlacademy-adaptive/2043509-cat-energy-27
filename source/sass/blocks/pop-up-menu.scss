@@ -1,0 +1,58 @@
+@use "../global/bootstrap.scss";
+
+.pop-up-menu {
+  display: none;
+
+  @include bootstrap.tablet {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.pop-up-menu--is-open {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include bootstrap.tablet {
+    z-index: 0;
+  }
+}
+
+.pop-up-menu--no-js {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include bootstrap.tablet {
+    padding-top: 0;
+  }
+}
+
+.pop-up-menu__button-close {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/svg/icon-cross.svg");
+  cursor: pointer;
+
+  @include bootstrap.tablet {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

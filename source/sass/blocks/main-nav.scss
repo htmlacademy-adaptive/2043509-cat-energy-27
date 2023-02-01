@@ -1,0 +1,48 @@
+@use "../global/bootstrap.scss";
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav__wrapper {
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 21px;
+  right: 22px;
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include bootstrap.tablet {
+    display: none;
+  }
+}
+
+.main-nav__toggle--open {
+  background-image: url("../img/svg/open-menu.svg");
+}
+
+.main-nav__toggle--close {
+  background-image: url("../img/svg/close-menu.svg");
+}
+
+.main-nav__toggle--no-js {
+  display: none;
+}
