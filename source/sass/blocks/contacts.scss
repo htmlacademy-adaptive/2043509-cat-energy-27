@@ -9,11 +9,18 @@
 .contacts__title {
   font-family: bootstrap.$font-primary;
   text-transform: uppercase;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  min-width: 140px;
   max-width: 171px;
   color: #111111;
   margin: 0;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {

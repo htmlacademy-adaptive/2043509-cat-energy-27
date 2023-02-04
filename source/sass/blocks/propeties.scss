@@ -1,0 +1,138 @@
+@use "../global/bootstrap.scss";
+
+.propeties {
+  position: relative;
+  padding: 20px 20.5px 49px 20.5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include bootstrap.tablet {
+    padding: 45px 31px 47px 31px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.propeties__title {
+  position: relative;
+  margin: 0 0 40px 0;
+  font-family: bootstrap.$font-primary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+
+  @include bootstrap.tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 32px 0;
+  }
+}
+
+.propeties__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  row-gap: 20px;
+  counter-reset: propeties;
+
+  @include bootstrap.tablet {
+    grid-template-columns: repeat(auto-fit, minmax(249px, max-content));
+    row-gap: 37px;
+    column-gap: 137px;
+    width: 100%;
+  }
+}
+
+.propeties__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding-left: 80px;
+
+  @include bootstrap.tablet {
+    min-height: 280px;
+    padding-left: 0;
+
+    &::after {
+      counter-increment: propeties;
+      content: "" counter(propeties) "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-family: bootstrap.$font-primary;
+      font-size: 280px;
+      line-height: 280px;
+      color: bootstrap.$secondary-color;
+      z-index: 0;
+      width: 136px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: bootstrap.$basic-color;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include bootstrap.tablet {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
+  }
+}
+
+.propeties__item--nutrition {
+  &::before {
+    background-image: url("../img/svg/icon-leaf.svg");
+  }
+}
+
+.propeties__item--form {
+  &::before {
+    background-image: url("../img/svg/icon-powder.svg");
+  }
+}
+
+.propeties__item--reception {
+  &::before {
+    background-image: url("../img/svg/icon-eat.svg");
+  }
+}
+
+.propeties__item--effect {
+  &::before {
+    background-image: url("../img/svg/icon-clock.svg");
+  }
+}
+
+.propeties__description {
+  margin: 0;
+  font-family: bootstrap.$font-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  max-width: 245px;
+  z-index: 2;
+
+  @include bootstrap.tablet {
+    position: absolute;
+    font-size: 16px;
+    line-height: 24px;
+    top: 151px;
+  }
+}
