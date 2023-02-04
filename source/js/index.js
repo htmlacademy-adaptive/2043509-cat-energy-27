@@ -2,6 +2,8 @@ const mainNavToggle = document.querySelectorAll('.main-nav__toggle');
 const menuOpenButton = document.querySelector('.main-nav__toggle--open');
 const menuCloseButton = document.querySelector('.main-nav__toggle--close');
 const popUpMenu = document.querySelector('.pop-up-menu');
+const mapLink = document.querySelector('.map__link');
+const mapFrame = document.querySelector('.map__frame');
 
 if (popUpMenu.classList.contains('pop-up-menu--no-js')) {
   popUpMenu.classList.remove('pop-up-menu--no-js')
@@ -13,6 +15,13 @@ if (element.classList.contains('main-nav__toggle--no-js')) {
 }
 })
 
+if (mapLink.classList.contains('map__link--no-js')) {
+  mapLink.classList.remove('map__link--no-js')
+}
+
+if (mapFrame.classList.contains('map__frame--no-js')) {
+  mapFrame.classList.remove('map__frame--no-js')
+}
 
 const openPopUp = function() {
   menuOpenButton.addEventListener('click', (evt) => {

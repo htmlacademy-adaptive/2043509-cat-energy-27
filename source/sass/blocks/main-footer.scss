@@ -14,9 +14,9 @@
   margin: 0 auto;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
 
   @include bootstrap.tablet {
-    padding: 37px 76px 36px 60px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
