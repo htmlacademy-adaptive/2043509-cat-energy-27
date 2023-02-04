@@ -1,0 +1,58 @@
+@use "../global/bootstrap.scss";
+
+.main-footer {
+  background-color: bootstrap.$secondary-color;
+  margin-top: auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+
+  @include bootstrap.tablet {
+    padding: 37px 76px 36px 60px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include bootstrap.desktop {
+    padding: 36px 136px 36px 119px;
+  }
+}
+
+.main-footer__logo {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #111111;
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+
+  &:hover,
+  &:focus {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
+  }
+}
+
+.main-footer__socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+}

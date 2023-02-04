@@ -1,0 +1,22 @@
+@use "../global/bootstrap.scss";
+
+.copyrights {
+  text-decoration: none;
+  color: #444444;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    & .copyrights__logo-img {
+      fill: #68b738;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
