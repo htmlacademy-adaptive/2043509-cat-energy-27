@@ -1,0 +1,59 @@
+@use "../global/bootstrap.scss";
+
+.map {
+  display: grid;
+}
+
+.map__link {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: none;
+  height: 362px;
+  width: 100%;
+  background-image: image-set(
+    url("../img/decoration-images/map-mobile@1x.webp") 1x,
+    url("../img/decoration-images/map-mobile@2x.webp") 2x,
+    url("../img/decoration-images/map-mobile@1x.jpg") 1x,
+    url("../img/decoration-images/map-mobile@2x.jpg") 2x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &--no-js {
+    display: flex;
+  }
+
+  @include bootstrap.tablet {
+    background-image: image-set(
+      url("../img/decoration-images/map-back-tablet@1x.webp") 1x,
+      url("../img/decoration-images/map-back-tablet@2x.webp") 2x,
+      url("../img/decoration-images/map-back-tablet@1x.jpg") 1x,
+      url("../img/decoration-images/map-back-tablet@2x.jpg") 2x
+    );
+  }
+
+  @include bootstrap.desktop {
+    background-image: image-set(
+      url("../img/decoration-images/map-back-desktop@1x.webp") 1x,
+      url("../img/decoration-images/map-back-desktop@2x.webp") 2x,
+      url("../img/decoration-images/map-back-desktop@1x.jpg") 1x,
+      url("../img/decoration-images/map-back-desktop@2x.jpg") 2x
+    );
+  }
+}
+
+.map__frame {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  display: flex;
+  width: 100%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+
+  &--no-js {
+    display: none;
+  }
+}
