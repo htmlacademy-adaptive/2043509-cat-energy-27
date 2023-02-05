@@ -23,6 +23,7 @@ if (mapFrame.classList.contains('map__frame--no-js')) {
   mapFrame.classList.remove('map__frame--no-js')
 }
 
+
 const openPopUp = function() {
   menuOpenButton.addEventListener('click', (evt) => {
   evt.preventDefault();
