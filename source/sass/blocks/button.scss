@@ -1,0 +1,28 @@
+@use "../global/bootstrap.scss";
+
+.button {
+  font-family: bootstrap.$font-primary;
+  background-color: bootstrap.$basic-color;
+  padding: 11px 10px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: none;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

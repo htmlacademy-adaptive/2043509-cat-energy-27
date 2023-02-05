@@ -1,0 +1,84 @@
+@use "../global/bootstrap.scss";
+
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo__wrapper {
+  position: relative;
+  padding: 27px 35px 0 35px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(104, 183, 56, 0.85);
+    height: 63%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 63%;
+    width: 100%;
+    z-index: 1;
+    background-image: url("../img/decoration-images/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.promo__title {
+  position: relative;
+  font-family: bootstrap.$font-primary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0 0 25px 0;
+  max-width: 250px;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.promo__subtitle {
+  position: relative;
+  font-family: bootstrap.$font-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 302px 0;
+  max-width: 250px;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.promo__image {
+  display: flex;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 73%);
+  z-index: 4;
+  overflow: hidden;
+}
+
+.promo__button {
+  width: 280px;
+}

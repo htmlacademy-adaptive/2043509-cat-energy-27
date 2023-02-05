@@ -1,5 +1,6 @@
 @use "./global/bootstrap.scss";
 @use "./blocks/visually-hidden.scss";
+@use "./blocks/button.scss";
 @use "./blocks/page.scss";
 @use "./blocks/page-body.scss";
 @use "./blocks/header-main.scss";
@@ -14,3 +15,4 @@
 @use "./blocks/propeties.scss";
 @use "./blocks/programs.scss";
 @use "./blocks/program.scss";
+@use "./blocks/promo.scss";
