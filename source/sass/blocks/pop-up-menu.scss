@@ -10,6 +10,7 @@
 }
 
 .pop-up-menu--is-open {
+  position: absolute;
   z-index: 10;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,33 @@
+@use "../global/bootstrap.scss";
+
+.program {
+  background-color: bootstrap.$secondary-color;
+  padding: 30px 20px 18px 20px;
+}
+
+.program__wrapper {
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+}
+
+.program__title {
+  font-family: bootstrap.$font-primary;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  padding-left: 69px;
+  max-width: 140px;
+  margin: 0 0 29px 0;
+  color: #000000;
+}
+
+.program__subtitle {
+  font-family: bootstrap.$font-secondary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 227px;
+  margin: 0 0 23px 0;
+  color: #444444;
+}
