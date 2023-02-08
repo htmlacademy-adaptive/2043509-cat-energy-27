@@ -4,7 +4,6 @@
   background-color: bootstrap.$secondary-color;
   margin-top: auto;
   padding: 40px 20px;
-  box-sizing: border-box;
   width: 100%;
 }
 
@@ -14,7 +13,6 @@
   margin: 0 auto;
   align-items: center;
   width: 100%;
-  box-sizing: border-box;
 
   @include bootstrap.tablet {
     flex-direction: row;

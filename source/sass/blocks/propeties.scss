@@ -3,7 +3,6 @@
 .propeties {
   position: relative;
   padding: 20px 20.5px 49px 20.5px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +45,10 @@
     row-gap: 37px;
     column-gap: 137px;
     width: 100%;
+  }
+
+  @include bootstrap.desktop {
+    column-gap: 94px;
   }
 }
 

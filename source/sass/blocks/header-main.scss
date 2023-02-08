@@ -5,9 +5,9 @@
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  box-sizing: border-box;
 
   @include bootstrap.tablet {
+    padding: 0 30px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -18,13 +18,12 @@
   position: relative;
   text-decoration: none;
   color: #111111;
-  padding: 24px 0 24px 110px;
+  padding: 23px 0 24px 110px;
   display: flex;
   align-items: center;
-  margin-right: 60px;
 
   @include bootstrap.tablet {
-    padding-left: 72px;
+    padding: 19px 0 24px 72px;
   }
 
   @include bootstrap.desktop {
@@ -43,8 +42,8 @@
 .header-main__logo::before {
   content: "";
   position: absolute;
-  left: 20px;
-  top: 12px;
+  left: 21px;
+  top: 10px;
   width: 34px;
   height: 38px;
   background-image: url("../img/svg/logo-mobile.svg");
@@ -53,6 +52,8 @@
   @include bootstrap.tablet {
     width: 60px;
     height: 50px;
+    left: 0;
+    top: 0;
     background-image: url("../img/svg/logo-tablet.svg");
   }
 
@@ -71,6 +72,8 @@
   @include bootstrap.tablet {
     &--not-mobile {
       color: #444444;
+      padding-left: 5px;
+      width: 67px;
     }
   }
 
