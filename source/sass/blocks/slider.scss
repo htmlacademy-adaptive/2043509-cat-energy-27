@@ -1,0 +1,68 @@
+@use "../global/bootstrap.scss";
+
+.slider {
+  position: relative;
+  height: 256px;
+}
+
+.slider__img-wrapper {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+
+  &--no-js {
+    width: 140px;
+  }
+}
+
+.slider__image {
+  display: flex;
+  vertical-align: middle;
+}
+
+.slider__compare-button {
+  display: flex;
+  padding: 0;
+  position: absolute;
+  z-index: 9;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  color: #666666;
+  top: calc(256px / 2 - 40px / 2);
+  left: calc(280px / 2 - 40px / 2);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -110px;
+    left: 18px;
+    width: 4px;
+    height: 256px;
+    border-radius: 2px;
+    background-color: #666666;
+    z-index: -1;
+  }
+
+  &:hover {
+
+    color: bootstrap.$basic-color;
+
+    &::after {
+      background-color: bootstrap.$basic-color;
+    }
+  }
+
+  &:active {
+    color: #5eaa2f;
+    opacity: 0.6;
+
+    &::after {
+      background-color: #5eaa2f;
+    }
+  }
+}

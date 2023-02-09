@@ -132,14 +132,23 @@
           </div>
         </div>
       </div>
-      <div class="example__slider">
-        <div class="slider">
-          <img class="slider__image" src="img/content-images/fat-cat-mobile@1x.png" alt="Толстый кот." width="280"
-            height="256">
-          <img class="slider__image" src="img/content-images/slim-cat-mobile@1x.png" alt="Поджарый кот." width="280"
+      <div class="slider slider">
+        <div class="slider__img-wrapper">
+          <img class="slider__image" src="img/content-images/slim-cat-mobile@1x.jpg" alt="Поджарый кот." width="280"
             height="256">
         </div>
-        <button class="compare-button" type="button"></button>
+        <button class="slider__compare-button" type="button" aria-label="Кнопка слайдера.">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="38" height="38" rx="19" fill="#ffffff" />
+            <path d="M16 11L8 20L16 29V11Z" fill="currentColor" />
+            <path d="M32 20L24 11V29L32 20Z" fill="currentColor" />
+            <rect x="1" y="1" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
+        <div class="slider__img-wrapper slider__img-wrapper--overlay slider__img-wrapper--no-js">
+          <img class="slider__image slider__image" src="img/content-images/fat-cat-mobile@1x.jpg" alt="Толстый кот."
+            width="280" height="256">
+        </div>
       </div>
     </section>
     <section class="map">
