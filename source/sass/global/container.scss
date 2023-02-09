@@ -1,0 +1,15 @@
+@use "../global/bootstrap.scss";
+
+.container {
+  padding: 0 20px;
+
+  @include bootstrap.tablet {
+    padding: 0 30px;
+  }
+
+
+  @include bootstrap.desktop {
+    padding: 0 110px;
+  }
+}
+
