@@ -25,6 +25,7 @@
 
   @include bootstrap.desktop {
     grid-template-columns: repeat(auto-fit, 570px);
+    justify-content: center;
     row-gap: 30px;
     column-gap: 80px;
   }
