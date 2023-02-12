@@ -7,13 +7,13 @@
 
 .map--not-index {
   & .map__contacts {
-    background-color: bootstrap.$secondary-color;
+    background-color: bootstrap.$color-grey;
   }
 }
 
 .map__link {
   grid-column: 1/-1;
-  grid-row: 2/3;
+  grid-row: 2/4;
   display: none;
   height: 362px;
   width: 100%;
@@ -53,7 +53,7 @@
 
 .map__frame {
   grid-column: 1/-1;
-  grid-row: 2/3;
+  grid-row: 2/4;
   display: flex;
   width: 100%;
   border: none;
@@ -67,6 +67,14 @@
 
 .map__contacts {
   @include bootstrap.desktop {
-    position: absolute;
+    grid-column: 1/-1;
+    grid-row: 2 / span 1;
+    z-index: 5;
+    max-width: 565px;
+    min-height: 198px;
+    height: auto;
+    background-color: #ffffff;
+    margin: 95px 0 0 110px;
+    padding: 56px 60px 56px 80px;
   }
 }

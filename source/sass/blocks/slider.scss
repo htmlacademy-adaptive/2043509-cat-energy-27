@@ -50,10 +50,10 @@
 
   &:hover {
 
-    color: bootstrap.$basic-color;
+    color: bootstrap.$color-green;
 
     &::after {
-      background-color: bootstrap.$basic-color;
+      background-color: bootstrap.$color-green;
     }
   }
 

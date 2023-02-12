@@ -1,7 +1,15 @@
 @use "../global/bootstrap.scss";
 
 .programs {
-  padding: 20px;
+  margin-bottom: 20px;
+
+  @include bootstrap.tablet {
+    margin-bottom: 45px;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 71px;
+  }
 }
 
 .programs__list {
@@ -10,4 +18,237 @@
   list-style-type: none;
   display: grid;
   row-gap: 20px;
+
+  @include bootstrap.tablet {
+    row-gap: 30px;
+  }
+
+  @include bootstrap.desktop {
+    grid-template-columns: repeat(auto-fit, 570px);
+    row-gap: 30px;
+    column-gap: 80px;
+  }
+}
+
+.programs__item {
+  position: relative;
+  background-color: bootstrap.$color-grey;
+  padding: 30px 20px 18px 20px;
+
+  @include bootstrap.tablet {
+    padding: 77px 61px 55px 52px;
+  }
+
+  @include bootstrap.desktop {
+    padding: 77px 28px 53px 52px;
+  }
+}
+
+.programs__item::before {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  content: "";
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: bootstrap.$color-green;
+
+  @include bootstrap.tablet {
+    width: 200px;
+    height: 200px;
+    left: unset;
+    top: 92px;
+    right: 62px;
+  }
+
+  @include bootstrap.desktop {
+    width: 100px;
+    height: 100px;
+    left: 52px;
+    top: 47px;
+    right: unset;
+  }
+}
+
+.programs__item::after {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  content: "";
+  display: flex;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.programs__item--weight-loss::after {
+  top: 21px;
+  left: 29px;
+  width: 36px;
+  height: 50px;
+  background-image: url("../img/svg/cat-slim.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include bootstrap.tablet {
+    width: 140px;
+    height: 194px;
+    left: unset;
+    top: 81px;
+    right: 92px;
+    background-image: url("../img/svg/cat-slim-tablet.svg");
+  }
+
+  @include bootstrap.desktop {
+    width: 70px;
+    height: 97px;
+    left: 67px;
+    top: 41px;
+    right: unset;
+    background-image: url("../img/svg/cat-slim-desktop.svg");
+  }
+}
+
+.programs__item--weight-gain::after {
+  top: 35px;
+  left: 13px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/svg/cat-fat.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include bootstrap.tablet {
+    width: 268px;
+    height: 112px;
+    left: unset;
+    top: 135px;
+    right: 28px;
+    background-image: url("../img/svg/cat-fat-tablet.svg");
+  }
+
+  @include bootstrap.desktop {
+    width: 134px;
+    height: 56px;
+    left: 33px;
+    top: 67px;
+    right: unset;
+    background-image: url("../img/svg/cat-fat-desktop.svg");
+  }
+}
+
+.programs__wrapper {
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+  padding-bottom: 23px;
+
+  @include bootstrap.tablet {
+    border-bottom: none;
+    padding: 0 288px 0 0;
+    margin-bottom: 48px;
+  }
+
+  @include bootstrap.desktop {
+    padding: 0;
+    margin-bottom: 23px;
+  }
+}
+
+.programs__title {
+  font-family: bootstrap.$font-oswald;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  padding-left: 69px;
+  max-width: 240px;
+  margin: 0 0 29px 0;
+  color: #000000;
+
+  @include bootstrap.tablet {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 1px;
+    margin: 0 0 24px 0;
+  }
+
+  @include bootstrap.desktop {
+    padding-left: 162px;
+    margin: 0 0 73px 0;
+    min-width: 480px;
+  }
+}
+
+.programs__subtitle {
+  font-family: bootstrap.$font-lato;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 227px;
+  margin: 0;
+  color: #444444;
+
+  @include bootstrap.tablet {
+    max-width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 460px;
+  }
+}
+
+.programs__link {
+  position: relative;
+  display: block;
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  max-width: 134px;
+  padding-right: 48px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    right: 12px;
+    top: calc(50% - 1px);
+    transition: all 0.5s ease;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+    background-color: #000000;
+    right: 8px;
+    top: calc(50% - 5px);
+    transition: all 0.5s ease;
+  }
+}
+
+.programs__link:hover {
+  &::before {
+    width: 24px;
+    right: 8px;
+  }
+
+  &::after {
+    transform: translateX(8px);
+  }
+}
+
+.programs__link:active {
+  opacity: 0.3;
 }

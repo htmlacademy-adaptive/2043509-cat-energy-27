@@ -45,7 +45,7 @@
   align-items: center;
   padding: 22px 0 24px 0;
   color: inherit;
-  font-family: bootstrap.$font-primary;
+  font-family: bootstrap.$font-oswald;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
@@ -64,7 +64,7 @@
     pointer-events: none;
 
     @include bootstrap.tablet {
-      box-shadow: inset 0 -2px bootstrap.$basic-color;
+      box-shadow: inset 0 -2px bootstrap.$color-green;
     }
   }
 

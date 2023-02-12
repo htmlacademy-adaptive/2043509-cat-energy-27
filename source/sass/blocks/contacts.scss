@@ -4,10 +4,18 @@
   display: flex;
   justify-content: space-between;
   padding: 26px 20px;
+
+  @include bootstrap.tablet {
+    padding: 56px 70px;
+  }
+
+  @include bootstrap.desktop {
+    padding: 56px 60px 56px 80px;
+  }
 }
 
 .contacts__title {
-  font-family: bootstrap.$font-primary;
+  font-family: bootstrap.$font-oswald;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 16px;
@@ -24,10 +32,25 @@
 }
 
 .contacts__address {
-  font-family: bootstrap.$font-secondary;
+  font-family: bootstrap.$font-lato;
   font-size: 14px;
   line-height: 20px;
   max-width: 160px;
   color: #444444;
   font-style: normal;
+
+  @include bootstrap.tablet {
+    text-align: right;
+  }
+
+  @include bootstrap.desktop {
+    text-align: left;
+  }
+}
+
+.contacts__street {
+  @include bootstrap.tablet {
+    display: block;
+    margin-bottom: 19px;
+  }
 }
