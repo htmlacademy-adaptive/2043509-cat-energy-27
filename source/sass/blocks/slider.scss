@@ -2,6 +2,7 @@
 
 .slider {
   position: relative;
+  min-width: 280px;
   height: 256px;
 }
 
@@ -12,7 +13,15 @@
   overflow: hidden;
 
   &--no-js {
-    width: 140px;
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 256px;
+    background-color: #f2f2f2;
+  }
+
+  &--fat-cat {
+    background-color: #f2f2f2;
   }
 }
 

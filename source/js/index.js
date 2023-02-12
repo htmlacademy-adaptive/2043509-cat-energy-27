@@ -111,7 +111,7 @@ function initComparisons() {
       slide(pos);
     }
     function getCursorPos(e) {
-      let a, x = 0;
+       let a, x = 0;
       e = (e.changedTouches) ? e.changedTouches[0] : e;
       /* Get the x positions of the image: */
       a = img.getBoundingClientRect();
