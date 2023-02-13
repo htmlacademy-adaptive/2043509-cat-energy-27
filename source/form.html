@@ -50,6 +50,63 @@
     </nav>
   </header>
   <main>
+    <section class="program-selection">
+      <h1 class="program-selection__title">Подбор программы</h1>
+      <p class="program-selection__subtitle">Заполните анкету, и мы подберем
+        программу питания для вашего кота</p>
+      <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="program-selection__field program-selection__field--about-cat">
+          <h3 class="visually-hidden">Информация о котике.</h3>
+          <label class="program-selection__label" for="name">
+            <span class="program-selection__label-text">Имя:<sup class="star-required">*</sup></span>
+            <input class="program-selection__input" type="text" name="name" id="name" placeholder="Котейка"
+              required></label>
+          <label class="program-selection__label" for="weight">
+            <span class="program-selection__label-text">Вес (кг):<sup class="star-required">*</sup></span>
+            <input class="program-selection__input" type="text" name="weight" id="weight" placeholder="50"
+              required></label>
+          <label class="program-selection__label" for="age">
+            <span class="program-selection__label-text">Возраст (лет):</span>
+            <input class="program-selection__input" type="text" name="age" id="age" placeholder="101" required></label>
+        </fieldset>
+        <fieldset class="program-selection__field program-selection__field--program">
+          <h3 class="visually-hidden">Выбор программы корректировки веса.</h3>
+          <label class="program-selection__label form-control form-control--weight-program" for="weight-loss">
+            <input class="program-selection__input form-control__input form-control__input--radio" type="radio"
+              id="weight-loss" name="weight-program" value="weight-loss" checked>
+            <span class="form-control__mark form-control__mark--radio"></span>Похудение
+          </label>
+          <label class="program-selection__label form-control form-control--weight-program" for="weight-gain">
+            <input class="program-selection__input form-control__input form-control__input--radio" type="radio"
+              id="weight-gain" name="weight-program" value="weight-gain">
+            <span class="form-control__mark form-control__mark--radio"></span>Набор массы
+          </label>
+          <label class="program-selection__label form-control form-control--weight-program" for="need-consultation">
+            <input class="program-selection__input form-control__input form-control__input--radio" type="radio"
+              id="need-consultation" name="weight-program" value="need-consultation">
+            <span class="form-control__mark form-control__mark--radio"></span>Не знаю (Нужен ваш совет)
+          </label>
+        </fieldset>
+        <fieldset class="program-selection__field program-selection__field--cat-owner">
+          <legend class="program-selection__title">Контактные данные (владельца кота)</legend>
+          <label class="program-selection__label form-control" for="weight-loss">
+            <input class="program-selection__input form-control__input form-control__input--radio" type="radio"
+              id="weight-loss" name="weight-program" value="weight-loss" checked>
+            <span class="form-control__mark form-control__mark--radio"></span>Похудение
+          </label>
+          <label class="program-selection__label form-control form-control--weight-program" for="weight-gain">
+            <input class="program-selection__input form-control__input form-control__input--radio" type="radio"
+              id="weight-gain" name="weight-program" value="weight-gain">
+            <span class="form-control__mark form-control__mark--radio"></span>Набор массы
+          </label>
+          <label class="program-selection__label form-control form-control--weight-program" for="need-consultation">
+            <input class="program-selection__input form-control__input form-control__input--radio" type="radio"
+              id="need-consultation" name="weight-program" value="need-consultation">
+            <span class="form-control__mark form-control__mark--radio"></span>Не знаю (Нужен ваш совет)
+          </label>
+        </fieldset>
+      </form>
+    </section>
     <section class="map map--not-index">
       <h2 class="visually-hidden">Наши контакты.</h2>
       <div class="map__contacts contacts">
