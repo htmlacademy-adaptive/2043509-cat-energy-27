@@ -15,6 +15,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+
+  @include bootstrap.tablet {
+    padding: 55px 30px 526px 120px;
+    align-items: start;
+  }
+
+  @include bootstrap.desktop {
+    padding: 79px 30px 185px 190px;
+    margin-bottom: 82px;
+  }
 
   &::before {
     content: "";
@@ -25,6 +36,10 @@
     height: 63%;
     width: 100%;
     z-index: 2;
+
+    @include bootstrap.tablet {
+      display: none;
+    }
   }
 
   &::after {
@@ -38,6 +53,10 @@
     background-image: url("../img/decoration-images/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include bootstrap.tablet {
+      display: none;
+    }
   }
 }
 
@@ -52,6 +71,19 @@
   max-width: 250px;
   color: #ffffff;
   z-index: 3;
+
+  @include bootstrap.tablet {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    margin: 0 0 41px 0;
+    max-width: 450px;
+    text-align: left;
+  }
+
+  @include bootstrap.desktop {
+    margin: 0 0 40px 0;
+  }
 }
 
 .promo__subtitle {
@@ -66,18 +98,54 @@
   max-width: 250px;
   color: #ffffff;
   z-index: 3;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    margin: 0 0 49px 0;
+    min-width: 300px;
+    text-align: left;
+  }
+
+  @include bootstrap.desktop {
+    margin: 0 0 52px 0;
+  }
 }
 
 .promo__image {
   display: flex;
   position: absolute;
-  bottom: 50%;
+  bottom: 43px;
   left: 50%;
-  transform: translate(-50%, 73%);
+  transform: translateX(-50%);
   z-index: 4;
   overflow: hidden;
+
+  @include bootstrap.tablet {
+    width: 709px;
+    height: 609px;
+    z-index: 0;
+    bottom: 0;
+  }
+
+  @include bootstrap.desktop {
+    width: 552px;
+    height: 499px;
+    z-index: 1;
+    bottom: 134px;
+    transform: translateX(-29%);
+  }
 }
 
 .promo__button {
   width: 280px;
+
+  @include bootstrap.tablet {
+    width: 244px;
+    height: 54px;
+    z-index: 4;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

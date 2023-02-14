@@ -27,18 +27,18 @@
               fill="currentColor" /></svg>
         </a>
       </div>
-      <nav class="header-main__navigation main-nav">
+      <nav class="main-nav">
         <!-- При отключенном js отображается меню мобильной версии в потоке за счет модификатора no-js -->
         <div class="main-nav__wrapper pop-up-menu pop-up-menu--no-js">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link site-list__link--current" href="#">Главная</a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item site-list__item--margin-left">
-              <a class="site-list__link" href="form.html">Подбор программы</a>
+            <li class="main-nav__item main-nav__item--margin-left">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -57,8 +57,20 @@
         <h2 class="promo__subtitle">Занялся собой? Займись котом!</h2>
         <a class="promo__button button" href="form.html">Подобрать программу</a>
       </div>
-      <img class="promo__image" src="img/content-images/index-can-mobile@1x.png" alt="Упаковка корма с курицей."
-        width="280" height="270">
+      <picture>
+        <source type="image/webp" media="(min-width: 1220px)"
+          srcset="img/content-images/index-can-desktop@2x.webp 2x, img/content-images/index-can-desktop@1x.webp 1x">
+        <source type="image/webp" media="(min-width: 718px)"
+          srcset="img/content-images/index-can-tablet@2x.webp 2x, img/content-images/index-can-tablet@1x.webp 1x">
+        <source type="image/webp"
+          srcset="img/content-images/index-can-mobile@2x.webp 2x, img/content-images/index-can-mobile@1x.webp 1x">
+        <source media="(min-width: 1220px)"
+          srcset="img/content-images/index-can-desktop@2x.png 2x, img/content-images/index-can-desktop@1x.png 1x">
+        <source media="(min-width: 718px)"
+          srcset="img/content-images/index-can-tablet@2x.png 2x, img/content-images/index-can-tablet@1x.png 1x">
+        <img class="promo__image" src="img/content-images/index-can-mobile@1x.png" alt="Упаковка корма с курицей."
+          width="280" height="270">
+      </picture>
     </section>
   </div>
   <main>
@@ -68,9 +80,8 @@
         <li class="programs__item programs__item--weight-loss">
           <div class="programs__wrapper">
             <h2 class="programs__title">Похудение</h2>
-            <p class="programs__subtitle">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-              Пора
-              на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="programs__subtitle">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить
+              по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           </div>
           <a class="programs__link" href="catalog.html/weught-loss">каталог slim
             <span></span>
@@ -79,8 +90,8 @@
         <li class="programs__item programs__item--weight-gain">
           <div class="programs__wrapper">
             <h2 class="programs__title">Набор массы</h2>
-            <p class="programs__subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-              поможет вашему коту нарастить необходимые мышцы!</p>
+            <p class="programs__subtitle">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy
+              Pro поможет вашему коту нарастить необходимые мышцы!</p>
           </div>
           <a class="programs__link" href="catalog.html/weught-loss">
             <span>каталог pro</span>

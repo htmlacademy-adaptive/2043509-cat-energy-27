@@ -37,11 +37,11 @@
   padding: 30px 20px 18px 20px;
 
   @include bootstrap.tablet {
-    padding: 77px 61px 55px 52px;
+    padding: 77px 61px 57px 52px;
   }
 
   @include bootstrap.desktop {
-    padding: 77px 28px 53px 52px;
+    padding: 77px 28px 57px 52px;
   }
 }
 
@@ -146,13 +146,13 @@
 
   @include bootstrap.tablet {
     border-bottom: none;
-    padding: 0 288px 0 0;
-    margin-bottom: 48px;
+    padding: 0 260px 0 0;
+    margin-bottom: 52px;
   }
 
   @include bootstrap.desktop {
     padding: 0;
-    margin-bottom: 23px;
+    margin-bottom: 28px;
   }
 }
 
@@ -198,7 +198,7 @@
   }
 
   @include bootstrap.desktop {
-    max-width: 460px;
+    max-width: 490px;
   }
 }
 
@@ -214,6 +214,12 @@
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 166px;
+  }
 
   &::before {
     position: absolute;

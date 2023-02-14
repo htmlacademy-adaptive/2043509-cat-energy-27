@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
+  background-color: transparent;
 
   @include bootstrap.tablet {
     padding: 0 30px;
@@ -12,10 +13,23 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @include bootstrap.desktop {
+    padding: 52px 20px 29px 110px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    position: relative;
+    z-index: 5;
+    align-items: start;
+  }
 }
 
 .header-main__logo-wrapper {
   padding-right: 60px;
+
+  @include bootstrap.tablet {
+    padding: 0;
+  }
 }
 
 .header-main__logo {
@@ -31,7 +45,7 @@
   }
 
   @include bootstrap.desktop {
-    padding-left: 84px;
+    padding: 23px 0 18px 84px;
   }
 
   &:hover {
@@ -86,7 +100,7 @@
     height: 22px;
 
     &--not-mobile {
-      width: 73px;
+      width: 78px;
       padding-left: 8px;
     }
   }

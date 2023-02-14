@@ -9,18 +9,9 @@
 }
 
 .slider__img-wrapper {
-  // position: absolute;
   width: auto;
   height: auto;
   overflow: hidden;
-  // background-color: #f2f2f2;
-
-  // &--no-js {
-  //   position: absolute;
-  //   content: "";
-  //   width: 50%;
-  //   height: 256px;
-  // }
 
   &--slim-cat {
     transform: scaleX(-1);

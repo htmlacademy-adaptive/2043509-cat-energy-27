@@ -2,13 +2,13 @@
 
 .propeties {
   position: relative;
-  padding: 0 20.5px 49px 20.5px;
+  padding-bottom: 49px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include bootstrap.tablet {
-    padding: 0 31px 47px 31px;
+    padding-bottom: 47px;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -41,14 +41,15 @@
   counter-reset: propeties;
 
   @include bootstrap.tablet {
-    grid-template-columns: repeat(auto-fit, minmax(249px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(247px, max-content));
     row-gap: 37px;
     column-gap: 137px;
     width: 100%;
   }
 
   @include bootstrap.desktop {
-    column-gap: 94px;
+    grid-template-columns: repeat(auto-fit, minmax(237px, max-content));
+    column-gap: 88px;
   }
 }
 
@@ -74,9 +75,18 @@
       line-height: 280px;
       color: bootstrap.$color-grey;
       z-index: 0;
-      width: 136px;
+      width: 140px;
       display: flex;
       justify-content: center;
+    }
+  }
+
+  @include bootstrap.desktop {
+    min-height: 280px;
+    padding-left: 0;
+
+    &::after {
+      width: 123px;
     }
   }
 
