@@ -2,28 +2,29 @@
 
 .slider {
   position: relative;
-  min-width: 280px;
+  width: 280px;
   height: 256px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .slider__img-wrapper {
-  position: absolute;
+  // position: absolute;
   width: auto;
   height: auto;
   overflow: hidden;
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
 
-  &--no-js {
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 256px;
-    // background-color: #f2f2f2;
-  }
-
-  // &--fat-cat {
-  //   background-color: #f2f2f2;
+  // &--no-js {
+  //   position: absolute;
+  //   content: "";
+  //   width: 50%;
+  //   height: 256px;
   // }
+
+  &--slim-cat {
+    transform: scaleX(-1);
+  }
 }
 
 .slider__image {

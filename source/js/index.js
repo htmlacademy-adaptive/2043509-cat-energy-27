@@ -70,12 +70,12 @@ function initComparisons() {
     w = img.offsetWidth;
     h = img.offsetHeight;
     /* Set the width of the img element to 50%: */
-    img.style.width = (w / 2) + "px";
+    img.style.width = (w) + "px";
 
     /* Position the slider in the middle: */
 
     slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    slider.style.left = (w) - (slider.offsetWidth / 2) + "px";
 
     /* Execute a function when the mouse button is pressed: */
     slider.addEventListener("mousedown", slideReady);
