@@ -7,6 +7,22 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
+
+  @include bootstrap.tablet {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 560px;
+    height: 518px;
+  }
+
+  @include bootstrap.desktop {
+    bottom: 62px;
+    left: unset;
+    right: 110px;
+    transform: none;
+  }
 }
 
 .slider__img-wrapper {
@@ -26,6 +42,11 @@
 .slider__image {
   display: flex;
   vertical-align: middle;
+
+  @include bootstrap.tablet {
+    width: 560px;
+    height: 518px;
+  }
 }
 
 .slider__compare-button {
@@ -53,6 +74,11 @@
     border-radius: 2px;
     background-color: #666666;
     z-index: -1;
+
+    @include bootstrap.tablet {
+      height: 518px;
+      top: -239px;
+    }
   }
 
   &:hover {

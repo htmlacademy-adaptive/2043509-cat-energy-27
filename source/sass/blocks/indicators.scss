@@ -5,6 +5,12 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @include bootstrap.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 430px;
+  }
 }
 
 .indicators__list {
@@ -18,6 +24,11 @@
   @include bootstrap.tablet {
     grid-template-columns: repeat(2, 162px);
     column-gap: 42px;
+    margin: 0;
+  }
+
+  @include bootstrap.desktop {
+    margin: 0 0 55px 0;
   }
 }
 
@@ -64,6 +75,10 @@
     background-color: #ffffff;
     bottom: -6px;
   }
+
+  @include bootstrap.desktop {
+    background-color: bootstrap.$color-grey;
+  }
 }
 
 .indicators__summary {
@@ -84,10 +99,21 @@
     max-width: 176px;
     padding-left: 0;
   }
+
+  @include bootstrap.desktop {
+    flex-direction: row;
+    max-width: 440px;
+  }
 }
 
 .indicators__cost {
   @include bootstrap.tablet {
-    margin-bottom: 9px;
+    margin: 0 0 9px 0;
+  }
+
+  @include bootstrap.desktop {
+    flex-direction: row;
+    max-width: 440px;
+    margin: 0 63px 0 0;
   }
 }

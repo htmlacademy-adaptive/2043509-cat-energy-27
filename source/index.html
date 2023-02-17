@@ -148,8 +148,17 @@
       <div class="slider">
         <div
           class="slider__img-wrapper slider__img-wrapper--overlay slider__img-wrapper--fat-cat slider__img-wrapper--no-js">
-          <img class="slider__image" src="img/content-images/fat-cat-mobile@1x.png" alt="Толстый кот." width="280"
-            height="256">
+          <picture>
+            <source type="image/webp" media="(min-width: 718px)"
+              srcset="img/content-images/fat-cat-desktop@2x.webp 2x, img/content-images/fat-cat-desktop@1x.webp 1x">
+            <source type="image/webp"
+              srcset="img/content-images/fat-cat-mobile@2x.webp 2x, img/content-images/fat-cat-mobile@1x.webp 1x">
+            <source media="(min-width: 718px)"
+              srcset="img/content-images/fat-cat-desktop@2x.png 2x, img/content-images/fat-cat-desktop@1x.png 1x">
+            <source srcset="img/content-images/fat-cat-mobile@2x.png 2x">
+            <img class="slider__image" src="img/content-images/fat-cat-mobile@1x.png" alt="Толстый кот." width="280"
+              height="256">
+          </picture>
         </div>
         <button class="slider__compare-button" type="button" aria-label="Кнопка слайдера.">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,8 +169,17 @@
           </svg>
         </button>
         <div class="slider__img-wrapper slider__img-wrapper--slim-cat">
-          <img class="slider__image" src="img/content-images/slim-cat-mobile@1x.png" alt="Поджарый кот." width="280"
-            height="256">
+          <picture>
+            <source type="image/webp" media="(min-width: 718px)"
+              srcset="img/content-images/slim-cat-desktop@2x.webp 2x, img/content-images/slim-cat-desktop@1x.webp 1x">
+            <source type="image/webp"
+              srcset="img/content-images/slim-cat-mobile@2x.webp 2x, img/content-images/slim-cat-mobile@1x.webp 1x">
+            <source media="(min-width: 718px)"
+              srcset="img/content-images/slim-cat-desktop@2x.png 2x, img/content-images/slim-cat-desktop@1x.png 1x">
+            <source srcset="img/content-images/slim-cat-mobile@2x.png 2x">
+            <img class="slider__image" src="img/content-images/slim-cat-mobile@1x.png" alt="Толстый кот." width="280"
+              height="256">
+          </picture>
         </div>
       </div>
     </section>
