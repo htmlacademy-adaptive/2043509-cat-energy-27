@@ -1,0 +1,93 @@
+@use "../global/bootstrap.scss";
+
+.indicators {
+  @include bootstrap.tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.indicators__list {
+  padding: 0;
+  margin: 0 0 33px 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 124px);
+  column-gap: 32px;
+
+  @include bootstrap.tablet {
+    grid-template-columns: repeat(2, 162px);
+    column-gap: 42px;
+  }
+}
+
+.indicators__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  position: relative;
+  padding: 14px 0 17px 0;
+}
+
+.indicators__term {
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.indicators__details {
+  position: absolute;
+  bottom: -14px;
+  font-family: bootstrap.$font-lato;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #444444;
+  max-width: 80px;
+  text-align: center;
+  margin: 0;
+  background-color: bootstrap.$color-grey;
+  z-index: 2;
+  padding: 0 10px 0 10px;
+
+  @include bootstrap.tablet {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 145px;
+    padding: 0 8px 0 10px;
+    background-color: #ffffff;
+    bottom: -6px;
+  }
+}
+
+.indicators__summary {
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 2px;
+
+  @include bootstrap.tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+    max-width: 176px;
+    padding-left: 0;
+  }
+}
+
+.indicators__cost {
+  @include bootstrap.tablet {
+    margin-bottom: 9px;
+  }
+}

@@ -6,6 +6,7 @@
   height: 256px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
 }
 
 .slider__img-wrapper {
@@ -15,6 +16,10 @@
 
   &--slim-cat {
     transform: scaleX(-1);
+
+    & .slider__image {
+      transform: scaleX(-1);
+    }
   }
 }
 
