@@ -32,13 +32,13 @@
         <div class="main-nav__wrapper pop-up-menu pop-up-menu--no-js">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
+              <a class="main-nav__link main-nav__link--index-desktop main-nav__link--current" href="#">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link main-nav__link--index-desktop" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item main-nav__item--margin-left">
-              <a class="main-nav__link" href="form.html">Подбор программы</a>
+              <a class="main-nav__link main-nav__link--index-desktop" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -58,13 +58,13 @@
         <a class="promo__button button" href="form.html">Подобрать программу</a>
       </div>
       <picture>
-        <source type="image/webp" media="(min-width: 1220px)"
+        <source type="image/webp" media="(min-width: 1024px)"
           srcset="img/content-images/index-can-desktop@2x.webp 2x, img/content-images/index-can-desktop@1x.webp 1x">
         <source type="image/webp" media="(min-width: 718px)"
           srcset="img/content-images/index-can-tablet@2x.webp 2x, img/content-images/index-can-tablet@1x.webp 1x">
         <source type="image/webp"
           srcset="img/content-images/index-can-mobile@2x.webp 2x, img/content-images/index-can-mobile@1x.webp 1x">
-        <source media="(min-width: 1220px)"
+        <source media="(min-width: 1024px)"
           srcset="img/content-images/index-can-desktop@2x.png 2x, img/content-images/index-can-desktop@1x.png 1x">
         <source media="(min-width: 718px)"
           srcset="img/content-images/index-can-tablet@2x.png 2x, img/content-images/index-can-tablet@1x.png 1x">
@@ -123,25 +123,30 @@
       </ul>
     </section>
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
+      <div class="container">
+        <h2 class="example__title">Живой пример</h2>
+      </div>
       <div class="example__wrapper">
-        <p class="example__description">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм
-          на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих
-          привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день. </p>
-        <div class="indicators">
-          <dl class="indicators__list">
-            <div class="indicators__item">
-              <dt class="indicators__term">5 кг</dt>
-              <dd class="indicators__details">снижение веса</dd>
+        <div class="container">
+          <p class="example__description">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный
+            корм
+            на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих
+            привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день. </p>
+          <div class="indicators">
+            <dl class="indicators__list">
+              <div class="indicators__item">
+                <dt class="indicators__term">5 кг</dt>
+                <dd class="indicators__details">снижение веса</dd>
+              </div>
+              <div class="indicators__item">
+                <dt class="indicators__term">60 дней</dt>
+                <dd class="indicators__details">затрачено времени</dd>
+              </div>
+            </dl>
+            <div class="indicators__summary">
+              <span class="indicators__cost">Затраты на питание:&nbsp;</span>
+              <span>15&nbsp;000 руб.</span>
             </div>
-            <div class="indicators__item">
-              <dt class="indicators__term">60 дней</dt>
-              <dd class="indicators__details">затрачено времени</dd>
-            </div>
-          </dl>
-          <div class="indicators__summary">
-            <span class="indicators__cost">Затраты на питание:&nbsp;</span>
-            <span>15&nbsp;000 руб.</span>
           </div>
         </div>
       </div>
@@ -203,9 +208,10 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper container">
       <a class="main-footer__logo" href="index.html">
-        <svg width="129" height="24" role="img" focusable="false" aria-label="Перейти на главную страницу.">
+        <svg class="main-footer__logo-img" width="129" height="24" role="img" focusable="false"
+          aria-label="Перейти на главную страницу.">
           <use href="img/svg/sprite.svg#footer-logo"></use>
         </svg>
       </a>
@@ -222,7 +228,7 @@
           <li class="socials__item">
             <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
               target="_blank" aria-label="Ютьюб.">
-              <svg width="28" height="22" role="img" focusable="false" fill="'currentColor">
+              <svg width="28" height="22" role="img" focusable="false">
                 <use href="img/svg/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -237,12 +243,12 @@
           </li>
         </ul>
       </div>
-      <a class="copyrights" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+      <a class="main-footer__copyrights" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
         aria-label="На сайт HTML-academy.">
-        <svg class="copyrights__text-img" width="113" height="19" role="img" focusable="false">
+        <svg class="main-footer__copyrights-text-img" width="113" height="19" role="img" focusable="false">
           <use href="img/svg/sprite.svg#htmlacademy-text"></use>
         </svg>
-        <svg class="copyrights__logo-img" width="27" height="34" role="img" focusable="false">
+        <svg class="main-footer__copyrights-logo-img" width="27" height="34" role="img" focusable="false">
           <use href="img/svg/sprite.svg#htmlacademy-logo"></use>
         </svg>
       </a>

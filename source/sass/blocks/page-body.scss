@@ -12,6 +12,9 @@
 }
 
 .page-body__header-wrapper {
+  position: relative;
+  width: 100%;
+
   @include bootstrap.desktop {
     &::before {
       position: absolute;

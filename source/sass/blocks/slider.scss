@@ -20,7 +20,7 @@
   @include bootstrap.desktop {
     bottom: 62px;
     left: unset;
-    right: 110px;
+    right: calc(15.5vw - 110px);
     transform: none;
   }
 }

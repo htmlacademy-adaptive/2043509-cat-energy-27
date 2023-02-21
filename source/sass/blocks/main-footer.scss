@@ -3,8 +3,19 @@
 .main-footer {
   background-color: bootstrap.$color-grey;
   margin-top: auto;
-  padding: 40px 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   width: 100%;
+
+  @include bootstrap.tablet {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @include bootstrap.desktop {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
 }
 
 .main-footer__wrapper {
@@ -16,13 +27,8 @@
 
   @include bootstrap.tablet {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
-  }
-
-  @include bootstrap.desktop {
-    padding: 36px 136px 36px 119px;
+    align-items: center;
   }
 }
 
@@ -43,6 +49,17 @@
   &:active {
     color: #6b6b6b;
   }
+
+  @include bootstrap.tablet {
+    width: initial;
+    border-bottom: none;
+    padding: 0;
+
+    & .main-footer__logo-img {
+      width: 143px;
+      height: 26px;
+    }
+  }
 }
 
 .main-footer__socials {
@@ -50,7 +67,39 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #d9d9d9;
   margin-bottom: 20px;
+
+  @include bootstrap.tablet {
+    width: initial;
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.main-footer__copyrights {
+  text-decoration: none;
+  color: #444444;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include bootstrap.tablet {
+    width: 168px;
+  }
+
+  &:hover,
+  &:focus {
+    & .main-footer__copyrights-logo-img {
+      fill: #68b738;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
