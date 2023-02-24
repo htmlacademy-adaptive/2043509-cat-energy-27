@@ -64,6 +64,11 @@
   top: calc(256px / 2 - 40px / 2);
   left: calc(280px / 2 - 40px / 2);
 
+  @include bootstrap.tablet {
+    top: 239px;
+    left: 260px;
+  }
+
   &::after {
     content: "";
     position: absolute;

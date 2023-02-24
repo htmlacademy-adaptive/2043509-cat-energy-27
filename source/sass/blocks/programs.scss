@@ -177,7 +177,7 @@
   @include bootstrap.desktop {
     padding-left: 162px;
     margin: 0 0 73px 0;
-    min-width: 480px;
+    max-width: 480px;
   }
 }
 

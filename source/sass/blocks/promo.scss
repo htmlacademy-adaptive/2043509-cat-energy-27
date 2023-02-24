@@ -18,12 +18,12 @@
   margin-bottom: 20px;
 
   @include bootstrap.tablet {
-    padding: 55px 30px 526px 120px;
+    padding: 55px 30px 526px 15%;
     align-items: start;
   }
 
   @include bootstrap.desktop {
-    padding: 79px 30px 185px 190px;
+    padding: 79px 30px 185px 13%;
     margin-bottom: 82px;
   }
 

@@ -8,14 +8,16 @@
   background-color: transparent;
 
   @include bootstrap.tablet {
-    padding: 0 30px;
+    padding-top: 0;
+    padding-bottom: 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
   @include bootstrap.desktop {
-    padding: 52px 20px 29px 110px;
+    padding-top: 52px;
+    padding-bottom: 29px;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     position: relative;
@@ -60,7 +62,7 @@
 .header-main__logo::before {
   content: "";
   position: absolute;
-  left: 21px;
+  left: 0;
   top: 10px;
   width: 34px;
   height: 38px;
@@ -70,7 +72,6 @@
   @include bootstrap.tablet {
     width: 60px;
     height: 50px;
-    left: 0;
     top: 0;
     background-image: url("../img/svg/logo-tablet.svg");
   }
