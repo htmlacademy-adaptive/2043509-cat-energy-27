@@ -4,10 +4,27 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-bottom: 35px;
+
+  @include bootstrap.tablet {
+    padding-bottom: 76px;
+  }
 }
 
-.catalog__main-products.container {
-  padding: 0;
+.catalog__main-products {
+  margin-bottom: 25px;
+  width: 100%;
+
+  @include bootstrap.tablet {
+    width: 100%;
+    padding: 0 30px 0 30px;
+    margin: 0 auto 68px auto;
+  }
+
+  @include bootstrap.desktop {
+    padding: 0 40px 0 40px;
+    max-width: 1300px;
+  }
 }
 
 .catalog__title {
@@ -19,13 +36,20 @@
   padding-top: 27px;
   padding-bottom: 41px;
   margin: 0;
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
 
   @include bootstrap.tablet {
     font-size: 60px;
     line-height: 60px;
     max-width: 500px;
+    border: none;
+    padding-top: 65px;
+    padding-bottom: 82px;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 550px;
+    padding-top: 74px;
+    padding-bottom: 84px;
   }
 }
 
@@ -33,24 +57,74 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include bootstrap.tablet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 324px);
+    column-gap: 60px;
+    row-gap: 60px;
+    margin: 0 auto;
+  }
+
+  @include bootstrap.desktop {
+    grid-template-columns: repeat(auto-fit, 245px);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
 }
 
 .catalog__products-item {
   padding-top: 19px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ebebeb;
+
+  &:first-child {
+    border-top: 1px solid #ebebeb;
+
+    @include bootstrap.tablet {
+      border-top: none;
+    }
+  }
+
+
+  @include bootstrap.tablet {
+    border-bottom: none;
+    background-image: linear-gradient(to bottom, #ffffff 0% 81px, #f2f2f2 81px 100%);
+
+    &.container {
+      padding-left: 36px;
+      padding-right: 36px;
+      padding-bottom: 39px;
+    }
+  }
+
+  @include bootstrap.desktop {
+    &.container {
+      padding-left: 35px;
+      padding-right: 30px;
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .catalog__product-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   margin-bottom: 13px;
+
+  @include bootstrap.tablet {
+    grid-template-columns: auto;
+  }
 }
 
 .catalog__link-img {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include bootstrap.tablet {
+    margin-bottom: 34px;
+  }
 }
 
 .catalog__product-link {
@@ -64,6 +138,12 @@
   font-family: bootstrap.$font-oswald;
   max-width: 76px;
   margin-bottom: 18px;
+
+  @include bootstrap.tablet {
+    max-width: 126px;
+    text-align: center;
+    margin: 0 auto 21px auto;
+  }
 }
 
 .catalog__product-description-list {
@@ -75,11 +155,28 @@
   line-height: 16px;
   font-weight: 400;
   color: #444444;
+
+  @include bootstrap.tablet {
+    font-size: 16px;
+    margin-bottom: 33px;
+  }
 }
 
 .catalog__product-description-wrapper {
   display: flex;
   justify-content: space-between;
+
+  @include bootstrap.tablet {
+    padding-bottom: 9px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.catalog__more-products-wrapper {
+  @include bootstrap.tablet {
+    padding-top: 81px;
+  }
 }
 
 .catalog__more-products {
@@ -88,6 +185,12 @@
   padding-bottom: 25px;
   border-bottom: 1px solid #ebebeb;
   max-width: 100%;
+
+  @include bootstrap.tablet {
+    border: 1px solid #ebebeb;
+    padding-top: 161px;
+    padding-bottom: 38px;
+  }
 
   &::after {
     position: absolute;
@@ -98,6 +201,11 @@
     width: 30px;
     height: 2px;
     background-color: #d3d3d3;
+
+    @include bootstrap.tablet {
+      top: 52px;
+      width: 60px;
+    }
   }
 
   &::before {
@@ -109,6 +217,11 @@
     width: 30px;
     height: 2px;
     background-color: #d3d3d3;
+
+    @include bootstrap.tablet {
+      top: 52px;
+      width: 60px;
+    }
   }
 }
 
@@ -121,6 +234,13 @@
   color: #111111;
   text-transform: uppercase;
   text-align: center;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 23px;
+    max-width: 134px;
+  }
 }
 
 .catalog__more-products-subtitle {
@@ -131,6 +251,13 @@
   line-height: 16px;
   font-weight: 400;
   color: #444444;
+
+  @include bootstrap.tablet {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 87px;
+    max-width: 165px;
+  }
 }
 
 .catalog__more-products-button {
@@ -144,5 +271,221 @@
 
   &:active {
     color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.catalog__additionals-title {
+  max-width: 100%;
+  padding: 0 0 36px 0;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: bootstrap.$font-oswald;
+  color: #000000;
+  background-color: #ffffff;
+
+  @include bootstrap.tablet {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 80px;
+    padding: 0 0 0 37px;
+  }
+
+  @include bootstrap.desktop {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.catalog__additionals {
+  margin: 0 auto;
+  width: 100%;
+
+  @include bootstrap.desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog__additionals-list {
+  margin: 0 auto 35px auto;
+  padding: 0;
+  list-style-type: none;
+
+  @include bootstrap.tablet {
+    margin-bottom: 69px;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 896px;
+    margin: 0 79px 0 0;
+  }
+}
+
+.catalog__additional {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+
+  @include bootstrap.tablet {
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    padding: 26px 38px 28px 38px;
+  }
+
+  @include bootstrap.desktop {
+    border-right: none;
+    border-left: none;
+    padding: 15px 0 17px 0;
+    display: flex;
+  }
+}
+
+.catalog__additional-wrapper {
+  margin-bottom: 15px;
+
+  @include bootstrap.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  @include bootstrap.desktop {
+    margin: 0 40px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 285px);
+    column-gap: 40px;
+    align-items: center;
+  }
+}
+
+.catalog__additional-title {
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0 0 13px 0;
+  color: #222222;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.catalog__additional-description-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: bootstrap.$font-lato;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+
+  @include bootstrap.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.catalog__additional-button {
+  @include bootstrap.desktop {
+    width: 244px;
+  }
+}
+
+.catalog__gift-wrapper {
+  position: relative;
+  padding-top: 187px;
+  padding-bottom: 43px;
+  background-image: url("../img/decoration-images/gift-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include bootstrap.tablet {
+    padding: 71px 124px 69px 422px;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 245px;
+    padding: 185px 43px 42px 41px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-color: transparent;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/svg/icon-gift.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    @include bootstrap.tablet {
+      width: 80px;
+      height: 82px;
+      top: 57px;
+      left: 77px;
+      transform: none;
+    }
+
+    @include bootstrap.desktop {
+      top: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(104, 183, 56, 0.85);
+    z-index: 0;
+  }
+}
+
+.catalog__gift-title {
+  position: relative;
+  z-index: 2;
+  font-family: bootstrap.$font-lato;
+  max-width: 161px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+
+  @include bootstrap.tablet {
+    text-align: left;
+  }
+
+  @include bootstrap.desktop {
+    text-align: center;
   }
 }

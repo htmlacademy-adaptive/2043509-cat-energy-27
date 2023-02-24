@@ -8,6 +8,10 @@
 .map--not-index {
   & .map__contacts {
     background-color: bootstrap.$color-grey;
+
+    @include bootstrap.desktop {
+      background-color: #ffffff;
+    }
   }
 }
 

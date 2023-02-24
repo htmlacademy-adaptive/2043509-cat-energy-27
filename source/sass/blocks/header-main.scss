@@ -19,10 +19,18 @@
     padding-top: 52px;
     padding-bottom: 29px;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 40% 60%);
     position: relative;
     z-index: 5;
     align-items: start;
+  }
+
+  &--not-index {
+    border-bottom: 1px solid #ebebeb;
+
+    @include bootstrap.tablet {
+      border-bottom: none;
+    }
   }
 }
 
