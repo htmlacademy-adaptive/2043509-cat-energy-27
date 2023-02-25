@@ -127,6 +127,13 @@
   }
 }
 
+.catalog__product-image {
+  @include bootstrap.tablet {
+    width: 168px;
+    height: 200px;
+  }
+}
+
 .catalog__product-link {
   display: block;
   text-decoration: none;

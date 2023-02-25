@@ -23,8 +23,9 @@
   }
 
   @include bootstrap.desktop {
-    padding: 79px 30px 185px 13%;
+    padding: 79px 30px 185px 120px;
     margin-bottom: 82px;
+    max-width: 1300px;
   }
 
   &::before {
