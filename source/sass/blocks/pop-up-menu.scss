@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  left: 0;
 
   @include bootstrap.tablet {
     z-index: 0;

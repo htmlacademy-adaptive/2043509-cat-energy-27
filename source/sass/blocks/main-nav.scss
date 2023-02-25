@@ -111,7 +111,9 @@
   }
 
   &.main-nav__link--current {
-    box-shadow: inset 0 -2px #ffffff;
+    @include bootstrap.desktop {
+      box-shadow: inset 0 -2px #ffffff;
+    }
   }
 }
 

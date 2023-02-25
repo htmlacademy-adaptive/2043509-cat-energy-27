@@ -52,7 +52,7 @@
 
   @include bootstrap.desktop {
     grid-template-columns: repeat(auto-fit, minmax(237px, max-content));
-    column-gap: 88px;
+    column-gap: 7.2%;
     margin: 0 auto;
   }
 }
@@ -145,7 +145,7 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  max-width: 245px;
+  max-width: 100%;
   z-index: 2;
 
   @include bootstrap.tablet {

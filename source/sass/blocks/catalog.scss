@@ -60,14 +60,14 @@
 
   @include bootstrap.tablet {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 324px);
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     column-gap: 60px;
     row-gap: 60px;
     margin: 0 auto;
   }
 
   @include bootstrap.desktop {
-    grid-template-columns: repeat(auto-fit, 245px);
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     column-gap: 80px;
     row-gap: 63px;
   }
@@ -114,6 +114,7 @@
 
   @include bootstrap.tablet {
     grid-template-columns: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -131,6 +132,7 @@
   @include bootstrap.tablet {
     width: 168px;
     height: 200px;
+    display: flex;
   }
 }
 
@@ -177,6 +179,10 @@
     padding-bottom: 9px;
     margin-bottom: 5px;
     border-bottom: 1px solid #cdcdcd;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -318,6 +324,14 @@
   }
 }
 
+.catalog__additional-list-wrapper {
+  @include bootstrap.desktop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
 .catalog__additionals-list {
   margin: 0 auto 35px auto;
   padding: 0;
@@ -329,7 +343,8 @@
 
   @include bootstrap.desktop {
     max-width: 896px;
-    margin: 0 79px 0 0;
+    margin: 0 40px 0 0;
+    width: 100%;
   }
 }
 
@@ -369,9 +384,11 @@
   @include bootstrap.desktop {
     margin: 0 40px 0 0;
     display: grid;
-    grid-template-columns: repeat(2, 285px);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
