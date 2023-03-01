@@ -17,6 +17,11 @@
   cursor: pointer;
   border: none;
 
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &:hover {
     background-color: #5eaa2f;
   }

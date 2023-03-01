@@ -48,10 +48,13 @@
 }
 
 .program-selection__field {
+  position: relative;
   border: none;
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow: hidden;
+  z-index: 1;
 
   &--about-cat {
     border-bottom: 1px solid #d9d9d9;
@@ -73,6 +76,42 @@
       border: none;
     }
   }
+
+  &--cat-owner {
+    margin-bottom: 24px;
+
+    @include bootstrap.tablet {
+      margin-bottom: 65px;
+    }
+
+    @include bootstrap.desktop {
+      margin-bottom: 67px;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 23px;
+
+    @include bootstrap.tablet {
+      margin-bottom: 65px;
+    }
+
+    @include bootstrap.desktop {
+      margin-bottom: 67px;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 34px;
+
+    @include bootstrap.tablet {
+      margin-bottom: 54px;
+    }
+
+    @include bootstrap.desktop {
+      margin-bottom: 61px;
+    }
+  }
 }
 
 .program-selection__list {
@@ -86,6 +125,10 @@
       grid-template-columns: repeat(auto-fit, minmax(221px, max-content));
       column-gap: 123px;
       row-gap: 32px;
+    }
+
+    @include bootstrap.desktop {
+      column-gap: 104px;
     }
   }
 
@@ -103,11 +146,70 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
-  max-width: 187px;
   padding: 0 22px 0 20px;
+  margin-left: -20px;
+  color: #000000;
+  background-color: #ffffff;
+  display: inline-table;
+
+  @include bootstrap.tablet {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: -40px;
+    padding: 0 40px 0 40px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 200%;
+    height: 2px;
+    background-color: bootstrap.$color-green;
+    left: -200px;
+    top: 15px;
+    z-index: -1;
+
+    @include bootstrap.tablet {
+      top: 22px;
+    }
+  }
 
   &--cat-owner {
     margin-bottom: 35px;
+    max-width: 225px;
+
+    @include bootstrap.tablet {
+      margin-bottom: 76px;
+      max-width: unset;
+    }
+  }
+
+  &--comment {
+    margin-bottom: 38px;
+
+    @include bootstrap.tablet {
+      margin-bottom: 76px;
+    }
+  }
+
+  &--additional {
+    margin-bottom: 34px;
+
+    @include bootstrap.tablet {
+      margin-bottom: 57px;
+    }
+  }
+}
+
+.program-selection__item {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include bootstrap.tablet {
+    margin: 0;
   }
 }
 
@@ -127,6 +229,10 @@
   @include bootstrap.tablet {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &--weight-program {
@@ -241,4 +347,74 @@
 
 .program-selection__control:disabled ~ span {
   opacity: 0.3;
+}
+
+.program-selection__text-area {
+  resize: none;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  padding: 9px 12px 0 15px;
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+
+  &::placeholder {
+    font-family: bootstrap.$font-oswald;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #444444;
+
+    @include bootstrap.tablet {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.program-selection__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  width: 100%;
+
+  @include bootstrap.tablet {
+    flex-direction: row;
+    margin-bottom: 72px;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 82px;
+  }
+}
+
+.program-selection__button {
+  width: 100%;
+  margin-bottom: 21px;
+
+  @include bootstrap.tablet {
+    margin-bottom: 0;
+    margin-right: 64px;
+    max-width: 282px;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 568px;
+  }
+}
+
+.program-selection__info-text {
+  font-family: bootstrap.$font-lato;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+
+  @include bootstrap.tablet {
+    font-size: 16px;
+  }
 }

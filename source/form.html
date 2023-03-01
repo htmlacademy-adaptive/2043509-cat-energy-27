@@ -8,6 +8,10 @@
   <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="img/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page-body">
@@ -54,7 +58,7 @@
   </header>
   <main>
     <section class="program-selection">
-      <div class="container">
+      <div class="container container--form">
         <h1 class="program-selection__title">Подбор программы</h1>
         <p class="program-selection__subtitle">Заполните анкету, и&nbsp;мы&nbsp;подберем программу питания для
           вашего кота</p>
@@ -62,7 +66,7 @@
       <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="program-selection__wrapper">
           <fieldset class="program-selection__field program-selection__field--about-cat">
-            <div class="container">
+            <div class="container container--form">
               <legend class="visually-hidden">Информация о котике.</legend>
               <label class="program-selection__label">
                 <span class="program-selection__label-text">Имя:<sup class="star-required">*</sup></span>
@@ -76,7 +80,7 @@
             </div>
           </fieldset>
           <fieldset class="program-selection__field program-selection__field--program">
-            <div class="container">
+            <div class="container container--form">
               <legend class="visually-hidden">Выбор программы корректировки веса.</legend>
               <ul class="program-selection__list program-selection__list--program">
                 <li class="program-selection__item">
@@ -108,8 +112,9 @@
           </fieldset>
         </div>
         <fieldset class="program-selection__field program-selection__field--cat-owner">
-          <div class="container">
-            <legend class="program-selection__legend program-selection__legend--cat-owner">Контактные данные (владельца
+          <div class="container container--form">
+            <legend class="program-selection__legend program-selection__legend--cat-owner">Контактные&nbsp;данные
+              (владельца
               кота)</legend>
             <label class="program-selection__label">
               <span class="program-selection__label-text">e-mail:<sup class="star-required">*</sup></span>
@@ -124,14 +129,15 @@
           </div>
         </fieldset>
         <fieldset class="program-selection__field program-selection__field--comment">
-          <div class="container">
+          <div class="container container--form">
             <legend class="program-selection__legend program-selection__legend--comment">Комментарий</legend>
-            <textarea name="commentary" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"
+            <textarea class="program-selection__text-area" name="commentary" cols="30" rows="10"
+              placeholder="Расскажите обо всех повадках кота"
               aria-label="Дополните сведения, если необходимо."></textarea>
           </div>
         </fieldset>
         <fieldset class="program-selection__field program-selection__field--additional">
-          <div class="container">
+          <div class="container container--form">
             <legend class="program-selection__legend program-selection__legend--additional">Дополнительно</legend>
             <ul class="program-selection__list program-selection__list--additional">
               <li class="program-selection__item">
@@ -167,7 +173,7 @@
             </ul>
           </div>
         </fieldset>
-        <div class="container">
+        <div class="container container--form">
           <div class="program-selection__button-wrapper">
             <button class="program-selection__button button" type="submit">Отправить заявку</button>
             <span class="program-selection__info-text"><sup class="star-required">*</sup> &mdash; Обязательные
