@@ -1,0 +1,87 @@
+@use "../global/bootstrap.scss";
+
+.program-selection {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-selection__title {
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  margin: 27px auto 37px 0;
+
+  @include bootstrap.tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 64px auto 54px 0;
+  }
+
+  @include bootstrap.tablet {
+    margin-bottom: 56px;
+    margin-top: 73px;
+  }
+}
+
+.program-selection__subtitle {
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  margin: 0 auto 39px 0;
+  max-width: 230px;
+  text-transform: uppercase;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+    max-width: 335px;
+  }
+}
+
+.program-selection__form {
+  width: 100%;
+}
+
+.program-selection__field {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  &--about-cat {
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 24px;
+  }
+
+  &--program {
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 19px;
+  }
+}
+
+.program-selection__label {
+  width: 100%;
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.program-selection__label-text {
+  margin-right: 13px;
+  display: block;
+}
+
+.program-selection__input {
+  max-width: 100%;
+  flex-grow: 1;
+}
