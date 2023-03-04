@@ -60,6 +60,7 @@
     border-bottom: 1px solid #d9d9d9;
     padding-bottom: 24px;
     margin-bottom: 22px;
+    padding-top: 1px;
 
 
     @include bootstrap.tablet {
@@ -215,6 +216,7 @@
 
 .program-selection__label {
   position: relative;
+  z-index: 2;
   max-width: 100%;
   font-family: bootstrap.$font-oswald;
   font-weight: 400;
@@ -231,13 +233,8 @@
     line-height: 30px;
   }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   &--weight-program {
     padding: 6px 0 6px 45px;
-    margin-bottom: 13px;
     color: #222222;
 
     @include bootstrap.tablet {
@@ -247,12 +244,17 @@
 
   &--additives {
     padding: 6px 0 6px 46px;
-    margin-bottom: 13px;
     color: #000000;
 
     @include bootstrap.tablet {
       padding: 5px 0 5px 60px;
     }
+  }
+}
+
+.program-selection__label:focus-within {
+  & .program-selection__mark {
+    border-color: #444444;
   }
 }
 
@@ -315,7 +317,8 @@
 
 .program-selection__input {
   width: 100%;
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #e7e7e7;
+  border: none;
   padding: 14px 20px 13px 20px;
   display: flex;
 
@@ -326,10 +329,20 @@
     line-height: 18px;
     text-transform: uppercase;
   }
+
+  &:hover {
+    outline-color: #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+  }
 }
 
 .program-selection__control {
-  display: none;
+  position: absolute;
+  z-index: -5;
+  appearance: none;
 }
 
 .program-selection__control:checked {
