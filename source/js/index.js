@@ -16,21 +16,6 @@ if (element.classList.contains('main-nav__toggle--no-js')) {
 }
 })
 
-sliderWrapper.forEach(element => {
-  if (element.classList.contains('slider__img-wrapper--no-js')) {
-    element.classList.remove('slider__img-wrapper--no-js')
-  }
-  })
-
-if (mapLink.classList.contains('map__link--no-js')) {
-  mapLink.classList.remove('map__link--no-js')
-}
-
-if (mapFrame.classList.contains('map__frame--no-js')) {
-  mapFrame.classList.remove('map__frame--no-js')
-}
-
-
 const openPopUp = function() {
   menuOpenButton.addEventListener('click', (evt) => {
   evt.preventDefault();

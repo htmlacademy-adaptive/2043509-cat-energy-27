@@ -420,7 +420,34 @@
 
   &:focus {
     outline: 2px solid #444444;
+
+    & + .program-selection__input-img {
+      stroke: bootstrap.$color-green;
+    }
   }
+
+  &.is-invalid {
+    outline: 2px solid bootstrap.$color-error;
+
+    &:hover {
+      outline-color: bootstrap.$color-error;
+    }
+
+    &:focus {
+      outline-color: bootstrap.$color-error;
+    }
+  }
+}
+
+.program-selection__input-img {
+  position: absolute;
+  right: 20px;
+  stroke: #222222;
+}
+
+
+.program-selection__input.is-invalid + .program-selection__input-img {
+  stroke: bootstrap.$color-error;
 }
 
 .program-selection__control {

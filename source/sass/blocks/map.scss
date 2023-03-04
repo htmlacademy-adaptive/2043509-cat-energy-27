@@ -19,43 +19,27 @@
   }
 }
 
-.map__link {
+.map__image-wrapper {
   grid-column: 1/-1;
   grid-row: 2/4;
-  display: none;
-  height: 362px;
+  height: 100%;
   width: 100%;
-  background-image: image-set(
-    url("../img/decoration-images/map-mobile@1x.webp") 1x,
-    url("../img/decoration-images/map-mobile@2x.webp") 2x,
-    url("../img/decoration-images/map-mobile@1x.jpg") 1x,
-    url("../img/decoration-images/map-mobile@2x.jpg") 2x
-  );
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+}
 
-  &--no-js {
-    display: flex;
-  }
+.map__image {
+  display: flex;
 
   @include bootstrap.tablet {
-    background-image: image-set(
-      url("../img/decoration-images/map-tablet@1x.webp") 1x,
-      url("../img/decoration-images/map-tablet@2x.webp") 2x,
-      url("../img/decoration-images/map-back-tablet@1x.jpg") 1x,
-      url("../img/decoration-images/map-tablet@2x.jpg") 2x
-    );
+    min-width: 768px;
+    width: 100%;
+    height: 396px;
   }
 
   @include bootstrap.desktop {
-    background-image: image-set(
-      url("../img/decoration-images/map-desktop@1x.webp") 1x,
-      url("../img/decoration-images/map-desktop@2x.webp") 2x,
-      url("../img/decoration-images/map-desktop@1x.jpg") 1x,
-      url("../img/decoration-images/map-desktop@2x.jpg") 2x
-    );
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -69,19 +53,15 @@
   overflow: hidden;
 
   @include bootstrap.tablet {
-    height: 400px;
+    height: 396px;
   }
 
   @include bootstrap.desktop {
     height: 100%;
   }
-
-  &--no-js {
-    display: none;
-  }
 }
 
-.contacts__wrapper {
+.map__contacts-wrapper {
   @include bootstrap.desktop {
     grid-column: 2/3;
     grid-row: 2/4;
