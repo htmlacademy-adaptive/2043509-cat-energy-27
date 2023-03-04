@@ -18,9 +18,9 @@
   }
 
   @include bootstrap.desktop {
-    bottom: 62px;
+    bottom: 0;
     left: unset;
-    right: calc(15.5vw - 110px);
+    right: 0;
     transform: none;
   }
 }

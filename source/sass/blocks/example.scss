@@ -61,6 +61,10 @@
     padding-bottom: 75px;
     margin: 0;
     background-color: bootstrap.$color-grey;
+
+    & .container {
+      position: relative;
+    }
   }
 }
 
