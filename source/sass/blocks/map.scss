@@ -3,6 +3,10 @@
 .map {
   position: relative;
   display: grid;
+
+  @include bootstrap.desktop {
+    grid-template-columns: 1fr minmax(1024px, 1440px) 1fr;
+  }
 }
 
 .map--not-index {
@@ -77,16 +81,25 @@
   }
 }
 
-.map__contacts {
+.contacts__wrapper {
   @include bootstrap.desktop {
-    grid-column: 1/-1;
-    grid-row: 2 / span 1;
+    grid-column: 2/3;
+    grid-row: 2/4;
     z-index: 5;
-    max-width: 565px;
+    width: 100%;
+    margin: 0 auto;
     min-height: 198px;
     height: auto;
+    pointer-events: none;
+  }
+}
+
+.map__contacts {
+  @include bootstrap.desktop {
+    max-width: 565px;
     background-color: #ffffff;
-    margin: 95px 0 107px 110px;
+    margin: 95px 0 107px 7.64%;
     padding: 56px 60px 56px 80px;
+    pointer-events: all;
   }
 }

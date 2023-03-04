@@ -134,7 +134,7 @@
     width: 552px;
     height: 499px;
     z-index: 1;
-    bottom: 134px;
+    top: 0;
     transform: translateX(-29%);
   }
 }
@@ -144,7 +144,7 @@
 
   @include bootstrap.tablet {
     width: 244px;
-    height: 54px;
+    min-height: 54px;
     z-index: 4;
     font-size: 20px;
     line-height: 20px;

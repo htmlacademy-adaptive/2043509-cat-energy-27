@@ -35,6 +35,8 @@
   position: relative;
   background-color: bootstrap.$color-grey;
   padding: 30px 20px 21px 20px;
+  display: flex;
+  flex-direction: column;
 
   @include bootstrap.tablet {
     padding: 77px 61px 57px 52px;
@@ -214,6 +216,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
+  margin-top: auto;
 
   @include bootstrap.tablet {
     font-size: 20px;

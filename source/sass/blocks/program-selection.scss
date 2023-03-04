@@ -149,6 +149,7 @@
   line-height: 26px;
   padding: 0 22px 0 20px;
   margin-left: -20px;
+  margin-top: 0;
   color: #000000;
   background-color: #ffffff;
   display: inline-table;
@@ -223,7 +224,7 @@
   font-size: 16px;
   line-height: 18px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-transform: uppercase;
   margin-bottom: 14px;
   color: #444444;
@@ -321,6 +322,7 @@
   border: none;
   padding: 14px 20px 13px 20px;
   display: flex;
+  color: #444444;
 
   &::placeholder {
     font-family: bootstrap.$font-oswald;
@@ -328,6 +330,8 @@
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
+    color: #444444;
+    opacity: 1;
   }
 
   &:hover {
@@ -381,6 +385,7 @@
     line-height: 18px;
     text-transform: uppercase;
     color: #444444;
+    opacity: 1;
 
     @include bootstrap.tablet {
       font-size: 20px;
