@@ -87,21 +87,24 @@
                   <label class="program-selection__label program-selection__label--weight-program">
                     <input class="program-selection__control program-selection__control--radio" type="radio"
                       name="weight-program" value="weight-loss" checked>
-                    <span class="program-selection__mark program-selection__mark--radio"></span><span>Похудение</span>
+                    <span class="program-selection__mark program-selection__mark--radio"></span><span
+                      class="program-selection__label-additional-text">Похудение</span>
                   </label>
                 </li>
                 <li class="program-selection__item">
                   <label class="program-selection__label program-selection__label--weight-program">
                     <input class="program-selection__control program-selection__control--radio" type="radio"
                       name="weight-program" value="weight-gain">
-                    <span class="program-selection__mark program-selection__mark--radio"></span><span>Набор массы</span>
+                    <span class="program-selection__mark program-selection__mark--radio"></span><span
+                      class="program-selection__label-additional-text">Набор массы</span>
                   </label>
                 </li>
                 <li class="program-selection__item">
                   <label class="program-selection__label program-selection__label--weight-program">
                     <input class="program-selection__control program-selection__control--radio" type="radio"
                       name="weight-program" value="need-consultation">
-                    <span class="program-selection__mark program-selection__mark--radio"></span><span>Не&nbsp;знаю
+                    <span class="program-selection__mark program-selection__mark--radio"></span><span
+                      class="program-selection__label-additional-text">Не&nbsp;знаю
                       (Нужен
                       ваш
                       совет)</span>
@@ -116,16 +119,18 @@
             <h3 class="program-selection__legend program-selection__legend--cat-owner">Контактные&nbsp;данные
               (владельца
               кота)</h3>
-            <label class="program-selection__label">
-              <span class="program-selection__label-text">e-mail:<sup class="star-required">*</sup></span>
-              <input class="program-selection__input" type="email" name="email" value=""
-                placeholder="kuklachev@gmail.com" required>
-            </label>
-            <label class="program-selection__label">
-              <span class="program-selection__label-text">телефон:<sup class="star-required">*</sup></span>
-              <input class="program-selection__input" type="tel" name="phone" value="" placeholder="8 (960) 900-60-90"
-                required>
-            </label>
+            <div class="program-selection__contacts-wrapper">
+              <label class="program-selection__label">
+                <span class="program-selection__label-text">e-mail:<sup class="star-required">*</sup></span>
+                <input class="program-selection__input" type="email" name="email" value=""
+                  placeholder="kuklachev@gmail.com" required>
+              </label>
+              <label class="program-selection__label">
+                <span class="program-selection__label-text">телефон:<sup class="star-required">*</sup></span>
+                <input class="program-selection__input" type="tel" name="phone" value="" placeholder="8 (960) 900-60-90"
+                  required>
+              </label>
+            </div>
           </div>
         </fieldset>
         <fieldset class="program-selection__field program-selection__field--comment">
@@ -144,15 +149,16 @@
                 <label class="program-selection__label program-selection__label--additives">
                   <input class="program-selection__control program-selection__control--checkbox" type="checkbox"
                     name="additional" value="sweetener" checked>
-                  <span
-                    class="program-selection__mark program-selection__mark--checkbox"></span><span>Сахарозаменитель</span>
+                  <span class="program-selection__mark program-selection__mark--checkbox"></span><span
+                    class="program-selection__label-additional-text">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="program-selection__item">
                 <label class="program-selection__label program-selection__label--additives">
                   <input class="program-selection__control program-selection__control--checkbox" type="checkbox"
                     name="additional" value="pure-water">
-                  <span class="program-selection__mark program-selection__mark--checkbox"></span><span>Питьевая
+                  <span class="program-selection__mark program-selection__mark--checkbox"></span><span
+                    class="program-selection__label-additional-text">Питьевая
                     вода</span>
                 </label>
               </li>
@@ -160,14 +166,16 @@
                 <label class="program-selection__label program-selection__label--additives">
                   <input class="program-selection__control program-selection__control--checkbox" type="checkbox"
                     name="additional" value="milk">
-                  <span class="program-selection__mark program-selection__mark--checkbox"></span><span>Молоко</span>
+                  <span class="program-selection__mark program-selection__mark--checkbox"></span><span
+                    class="program-selection__label-additional-text">Молоко</span>
                 </label>
               </li>
               <li class="program-selection__item">
                 <label class="program-selection__label program-selection__label--additives">
                   <input class="program-selection__control program-selection__control--checkbox" type="checkbox"
                     name="additional" value="vitamins">
-                  <span class="program-selection__mark program-selection__mark--checkbox"></span><span>Витамины</span>
+                  <span class="program-selection__mark program-selection__mark--checkbox"></span><span
+                    class="program-selection__label-additional-text">Витамины</span>
                 </label>
               </li>
             </ul>
@@ -241,9 +249,10 @@
       </div>
       <a class="main-footer__copyrights" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
         aria-label="На сайт HTML-academy.">
-        <svg class="main-footer__copyrights-text-img" width="113" height="19" role="img" focusable="false">
+        <span class="main-footer__copyrights-text">HTML&nbsp;Academy</span>
+        <!-- <svg class="main-footer__copyrights-text-img" width="113" height="19" role="img" focusable="false">
           <use href="./img/svg/sprite.svg#htmlacademy-text"></use>
-        </svg>
+        </svg> -->
         <svg class="main-footer__copyrights-logo-img" width="27" height="34" role="img" focusable="false">
           <use href="./img/svg/sprite.svg#htmlacademy-logo"></use>
         </svg>

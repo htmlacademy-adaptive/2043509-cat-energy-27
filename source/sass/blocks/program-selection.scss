@@ -47,6 +47,21 @@
   width: 100%;
 }
 
+.program-selection__wrapper {
+  @include bootstrap.desktop {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto 69px auto;
+    padding: 0 40px 0 40px;
+
+    & .container,
+    & .container--form {
+      padding: 0;
+    }
+  }
+}
+
 .program-selection__field {
   position: relative;
   border: none;
@@ -66,6 +81,13 @@
     @include bootstrap.tablet {
       border: none;
     }
+
+    @include bootstrap.desktop {
+      margin-right: 80px;
+      padding-right: 1px;
+      padding-bottom: 1px;
+      margin-bottom: 0;
+    }
   }
 
   &--program {
@@ -75,6 +97,11 @@
 
     @include bootstrap.tablet {
       border: none;
+    }
+
+    @include bootstrap.desktop {
+      padding-bottom: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -115,6 +142,36 @@
   }
 }
 
+.program-selection__field--cat-owner .program-selection__label-text {
+  margin-right: 10px;
+
+  @include bootstrap.tablet {
+    margin-right: 20px;
+  }
+}
+
+.program-selection__field--cat-owner .program-selection__contacts-wrapper {
+  @include bootstrap.desktop {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 569px));
+    column-gap: 80px;
+    padding-bottom: 1px;
+  }
+}
+
+.program-selection__field--cat-owner .program-selection__label {
+  @include bootstrap.desktop {
+    margin-bottom: 0;
+  }
+}
+
+.program-selection__field--additional .program-selection__item {
+  @include bootstrap.tablet {
+    margin-bottom: 0;
+  }
+}
+
 .program-selection__list {
   margin: 0;
   padding: 0;
@@ -136,7 +193,7 @@
   &--program {
     @include bootstrap.tablet {
       border: 1px solid #e7e7e7;
-      padding: 25px 25px 25px 28px;
+      padding: 24px 25px 24px 28px;
     }
   }
 }
@@ -209,10 +266,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
-  @include bootstrap.tablet {
-    margin: 0;
-  }
 }
 
 .program-selection__label {
@@ -224,32 +277,49 @@
   font-size: 16px;
   line-height: 18px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   text-transform: uppercase;
   margin-bottom: 14px;
   color: #444444;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include bootstrap.tablet {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 20px;
   }
 
   &--weight-program {
-    padding: 6px 0 6px 45px;
+    padding-left: 45px;
     color: #222222;
+    align-items: flex-start;
+    margin-bottom: 0;
 
     @include bootstrap.tablet {
-      padding: 5px 0 5px 60px;
+      padding-left: 60px;
     }
   }
 
   &--additives {
-    padding: 6px 0 6px 46px;
+    padding-left: 46px;
     color: #000000;
+    align-items: flex-start;
+    margin-bottom: 0;
 
     @include bootstrap.tablet {
-      padding: 5px 0 5px 60px;
+      padding-left: 60px;
     }
+  }
+}
+
+.program-selection__label-additional-text {
+  padding: 6px 0 6px 0;
+
+  @include bootstrap.tablet {
+    padding: 5px 0 5px 0;
   }
 }
 
@@ -318,11 +388,21 @@
 
 .program-selection__input {
   width: 100%;
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
   outline: 1px solid #e7e7e7;
   border: none;
   padding: 14px 20px 13px 20px;
   display: flex;
   color: #444444;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 11px 20px 11px 20px;
+  }
 
   &::placeholder {
     font-family: bootstrap.$font-oswald;

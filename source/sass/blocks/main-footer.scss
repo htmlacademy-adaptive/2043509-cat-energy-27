@@ -22,13 +22,11 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  align-items: center;
   width: 100%;
 
   @include bootstrap.tablet {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }
 
@@ -85,7 +83,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+
   width: 100%;
 
   @include bootstrap.tablet {
@@ -102,4 +100,13 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.main-footer__copyrights-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #444444;
+  font-family: bootstrap.$font-lato;
+  padding-top: 8px;
 }
