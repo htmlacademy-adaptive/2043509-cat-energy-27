@@ -2,13 +2,13 @@
 
 .example {
   background-color: bootstrap.$color-grey;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
 
   @include bootstrap.tablet {
     position: relative;
-    padding: 0 0 711px 0;
+    padding: 0 0 718px 0;
     background-color: transparent;
     background-image: linear-gradient(to top, #eaeaea, #eaeaea 462px, #ffffff 462px, #ffffff 100%);
   }

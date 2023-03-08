@@ -44,9 +44,9 @@
   counter-reset: propeties;
 
   @include bootstrap.tablet {
-    grid-template-columns: repeat(auto-fit, minmax(247px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 247px));
     row-gap: 37px;
-    column-gap: 137px;
+    column-gap: 19.3%;
     width: 100%;
   }
 
