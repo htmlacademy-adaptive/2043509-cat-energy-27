@@ -24,6 +24,7 @@
   @include bootstrap.desktop {
     padding: 0 40px 0 40px;
     max-width: 1300px;
+    margin-bottom: 74px;
   }
 }
 
@@ -69,7 +70,7 @@
   @include bootstrap.desktop {
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 61px;
   }
 }
 
@@ -106,7 +107,7 @@
 
   @include bootstrap.desktop {
     &.container {
-      padding-left: 35px;
+      padding-left: 32px;
       padding-right: 30px;
       padding-bottom: 40px;
     }
@@ -168,6 +169,10 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  @include bootstrap.desktop {
+    margin-bottom: 21px;
+  }
 }
 
 .catalog__product-description-list {
@@ -183,6 +188,10 @@
   @include bootstrap.tablet {
     font-size: 16px;
     margin-bottom: 33px;
+  }
+
+  @include bootstrap.desktop {
+    padding: 0 5px 0 8px;
   }
 }
 
@@ -225,6 +234,11 @@
   @include bootstrap.tablet {
     border: 1px solid #ebebeb;
     padding: 161px 37px 38px 37px;
+  }
+
+  @include bootstrap.desktop {
+    padding-top: 159px;
+    padding-bottom: 41px;
   }
 
   &::after {
