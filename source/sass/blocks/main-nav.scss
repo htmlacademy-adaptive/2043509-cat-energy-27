@@ -4,6 +4,10 @@
   display: flex;
   background-color: transparent;
 
+  @include bootstrap.tablet {
+    padding-top: 9px;
+  }
+
   @include bootstrap.desktop {
     padding-top: 7px;
     justify-self: end;
@@ -22,6 +26,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 500px;
+    align-items: flex-start;
   }
 
   @include bootstrap.desktop {
@@ -39,6 +44,7 @@
   @include bootstrap.tablet {
     box-shadow: none;
     margin-left: 34px;
+    max-width: 170px;
 
     &:last-child {
       margin-left: 37px;

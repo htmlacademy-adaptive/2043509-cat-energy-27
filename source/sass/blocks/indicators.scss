@@ -97,11 +97,12 @@
   text-align: center;
   padding-left: 2px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 
   @include bootstrap.tablet {
-    display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     font-size: 20px;
     max-width: 176px;
     padding-left: 0;
@@ -116,13 +117,18 @@
 }
 
 .indicators__cost {
+  max-width: 200px;
+
   @include bootstrap.tablet {
     margin: 0 0 9px 0;
   }
 
   @include bootstrap.desktop {
-    flex-direction: row;
     max-width: 440px;
-    margin: 0 65px 0 0;
+    margin: 0 63px 0 0;
   }
+}
+
+.indicators__price {
+  max-width: 100px;
 }

@@ -146,6 +146,14 @@
   }
 }
 
+.catalog__link-img:hover + .catalog__link-wrapper .catalog__product-link {
+  opacity: 0.6;
+}
+
+.catalog__link-img:active + .catalog__link-wrapper .catalog__product-link {
+  opacity: 0.3;
+}
+
 .catalog__product-image {
   @include bootstrap.tablet {
     width: 168px;
@@ -176,6 +184,14 @@
 
   @include bootstrap.desktop {
     margin-bottom: 21px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

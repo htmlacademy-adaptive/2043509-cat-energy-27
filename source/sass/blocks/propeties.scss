@@ -68,14 +68,15 @@
   @include bootstrap.tablet {
     min-height: 280px;
     padding-left: 0;
-    padding-top: 94px;
+    padding-top: 150px;
+    align-items: flex-start;
 
     &::after {
       counter-increment: propeties;
       content: "" counter(propeties) "";
       position: absolute;
       right: 0;
-      bottom: 0;
+      top: 0;
       font-family: bootstrap.$font-oswald;
       font-size: 280px;
       line-height: 280px;
