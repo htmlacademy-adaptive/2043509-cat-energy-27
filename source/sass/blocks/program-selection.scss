@@ -16,12 +16,13 @@
   @include bootstrap.tablet {
     font-size: 60px;
     line-height: 60px;
-    margin: 54px auto 54px 0;
+    margin-top: 54px;
+    margin-bottom: 54px;
   }
 
   @include bootstrap.desktop {
-    margin-bottom: 56px;
-    margin-top: 73px;
+    margin-top: 43px;
+    margin-bottom: 55px;
   }
 }
 
@@ -127,7 +128,7 @@
     }
 
     @include bootstrap.desktop {
-      margin-bottom: 67px;
+      margin-bottom: 64px;
     }
   }
 
@@ -157,6 +158,11 @@
 
   @include bootstrap.tablet {
     padding: 12px 19px 10px 19px;
+  }
+
+  @include bootstrap.desktop {
+    padding-top: 11px;
+    padding-bottom: 9px;
   }
 }
 
@@ -387,6 +393,11 @@
     border-radius: 50%;
     background-color: bootstrap.$color-green;
     display: none;
+
+    @include bootstrap.tablet {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 
@@ -569,6 +580,7 @@
 
   @include bootstrap.desktop {
     max-width: 568px;
+    margin-right: 85px;
   }
 }
 
