@@ -18,7 +18,7 @@
   @include bootstrap.tablet {
     width: 100%;
     padding: 0 30px 0 30px;
-    margin: 0 auto 68px auto;
+    margin: 0 auto 67px auto;
   }
 
   @include bootstrap.desktop {
@@ -42,13 +42,13 @@
     line-height: 60px;
     max-width: 500px;
     border: none;
-    padding-top: 65px;
+    padding-top: 55px;
     padding-bottom: 82px;
   }
 
   @include bootstrap.desktop {
     max-width: 550px;
-    padding-top: 74px;
+    padding-top: 44px;
     padding-bottom: 84px;
   }
 }
@@ -98,7 +98,7 @@
     background-image: linear-gradient(to bottom, #ffffff 0% 81px, #f2f2f2 81px 100%);
 
     &.container {
-      padding-left: 36px;
+      padding-left: 38px;
       padding-right: 36px;
       padding-bottom: 39px;
     }
@@ -116,11 +116,12 @@
 .catalog__product-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 
   @include bootstrap.tablet {
     grid-template-columns: auto;
     margin-bottom: 0;
+    width: 100%;
   }
 }
 
@@ -130,7 +131,13 @@
   align-items: center;
 
   @include bootstrap.tablet {
+    margin-top: -10px;
     margin-bottom: 34px;
+  }
+
+  @include bootstrap.desktop {
+    margin-top: -18px;
+    margin-bottom: 40px;
   }
 }
 
@@ -152,12 +159,14 @@
   font-weight: 400;
   font-family: bootstrap.$font-oswald;
   max-width: 76px;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 
   @include bootstrap.tablet {
-    max-width: 126px;
+    max-width: 131px;
     text-align: center;
-    margin: 0 auto 21px auto;
+    margin: 0 auto 18px auto;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -183,13 +192,18 @@
 
   @include bootstrap.tablet {
     padding-bottom: 9px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     border-bottom: 1px solid #cdcdcd;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
+}
+
+.catalog__product-details--weight,
+.catalog__product-details--cost {
+  margin-right: 4px;
 }
 
 .catalog__more-products-wrapper {
@@ -202,7 +216,7 @@
 .catalog__more-products {
   position: relative;
   padding-top: 78px;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
   border-bottom: 1px solid #ebebeb;
   max-width: 100%;
   display: flex;
@@ -210,8 +224,7 @@
 
   @include bootstrap.tablet {
     border: 1px solid #ebebeb;
-    padding-top: 161px;
-    padding-bottom: 38px;
+    padding: 161px 37px 38px 37px;
   }
 
   &::after {
@@ -225,7 +238,7 @@
     background-color: #d3d3d3;
 
     @include bootstrap.tablet {
-      top: 52px;
+      top: 82px;
       width: 60px;
     }
   }
@@ -241,7 +254,7 @@
     background-color: #d3d3d3;
 
     @include bootstrap.tablet {
-      top: 52px;
+      top: 82px;
       width: 60px;
     }
   }
@@ -287,6 +300,8 @@
   max-width: 100%;
   color: #444444;
   margin-top: auto;
+  font-size: 16px;
+  line-height: 20px;
 
   &:hover {
     background-color: #ebebeb;
@@ -301,7 +316,7 @@
   max-width: 100%;
   display: inline-flex;
   padding: 0 20px 0 20px;
-  margin: 0 auto 36px -20px;
+  margin: 0 auto 35px -20px;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
@@ -377,7 +392,7 @@
 
 .catalog__additional {
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-bottom: 1px solid #cdcdcd;
 
   &:first-child {
@@ -405,7 +420,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   @include bootstrap.desktop {
@@ -450,10 +465,25 @@
   @include bootstrap.tablet {
     font-size: 16px;
     line-height: 20px;
+    padding-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 60px;
+    justify-items: end;
+    column-gap: 33px;
+  }
+}
+
+.catalog__additional-price {
+  @include bootstrap.tablet {
+    margin-left: 0;
+    margin-right: 2px;
   }
 }
 
 .catalog__additional-button {
+  font-size: 16px;
+  line-height: 20px;
+
   @include bootstrap.desktop {
     width: 244px;
   }
@@ -470,6 +500,7 @@
 
   @include bootstrap.tablet {
     padding: 71px 124px 69px 422px;
+    background-position: 100% 60%;
   }
 
   @include bootstrap.desktop {
@@ -543,6 +574,8 @@
 
 .catalog__product-button {
   margin-top: auto;
+  font-size: 16px;
+  line-height: 20px;
 
   @include bootstrap.tablet {
     width: 248px;
