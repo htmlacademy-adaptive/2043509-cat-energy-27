@@ -495,12 +495,6 @@
   stroke: bootstrap.$color-error;
 }
 
-.program-selection__control {
-  position: absolute;
-  z-index: -5;
-  appearance: none;
-}
-
 .program-selection__control:checked {
   & + .program-selection__mark--radio::before,
   & + .program-selection__mark--checkbox::before {
