@@ -118,7 +118,7 @@
   }
 
   &--comment {
-    margin-bottom: 23px;
+    margin-bottom: 19px;
 
     @include bootstrap.tablet {
       margin-bottom: 65px;
@@ -130,7 +130,7 @@
   }
 
   &--additional {
-    margin-bottom: 34px;
+    margin-bottom: 33px;
 
     @include bootstrap.tablet {
       margin-bottom: 54px;
@@ -143,11 +143,15 @@
 }
 
 .program-selection__field--cat-owner .program-selection__label-text {
-  margin-right: 10px;
+  margin-right: 13px;
 
   @include bootstrap.tablet {
     margin-right: 20px;
   }
+}
+
+.program-selection__field--cat-owner .program-selection__input {
+  padding: 14px 14px 11px 14px;
 }
 
 .program-selection__field--cat-owner .program-selection__contacts-wrapper {
@@ -279,7 +283,7 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: #444444;
 
   &:last-child {
@@ -381,8 +385,8 @@
 }
 
 .program-selection__label-text {
-  margin-right: 13px;
-  display: block;
+  margin-right: 16px;
+  display: flex;
   white-space: nowrap;
 }
 
@@ -394,7 +398,7 @@
   line-height: 18px;
   outline: 1px solid #e7e7e7;
   border: none;
-  padding: 14px 20px 13px 20px;
+  padding: 14px 20px 11px 20px;
   display: flex;
   color: #444444;
 
@@ -439,9 +443,13 @@
   }
 }
 
+.program-selection__label-required {
+  margin-top: 1px;
+}
+
 .program-selection__input-img {
   position: absolute;
-  right: 20px;
+  right: 15px;
   stroke: #222222;
 }
 
@@ -477,7 +485,7 @@
   resize: none;
   width: 100%;
   border: 1px solid #e7e7e7;
-  padding: 9px 12px 0 15px;
+  padding: 9px 12px 14px 15px;
   font-family: bootstrap.$font-oswald;
   font-weight: 400;
   font-size: 16px;
@@ -505,7 +513,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   width: 100%;
 
   @include bootstrap.tablet {
@@ -520,7 +528,9 @@
 
 .program-selection__button {
   width: 100%;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
+  font-size: 16px;
+  line-height: 20px;
 
   @include bootstrap.tablet {
     margin-bottom: 0;
@@ -538,6 +548,8 @@
   font-size: 14px;
   line-height: 16px;
   color: #000000;
+  display: flex;
+  align-items: flex-start;
 
   @include bootstrap.tablet {
     font-size: 16px;
