@@ -16,10 +16,10 @@
   @include bootstrap.tablet {
     font-size: 60px;
     line-height: 60px;
-    margin: 64px auto 54px 0;
+    margin: 54px auto 54px 0;
   }
 
-  @include bootstrap.tablet {
+  @include bootstrap.desktop {
     margin-bottom: 56px;
     margin-top: 73px;
   }
@@ -80,6 +80,7 @@
 
     @include bootstrap.tablet {
       border: none;
+      margin-bottom: 49px;
     }
 
     @include bootstrap.desktop {
@@ -97,6 +98,7 @@
 
     @include bootstrap.tablet {
       border: none;
+      margin-bottom: 55px;
     }
 
     @include bootstrap.desktop {
@@ -121,7 +123,7 @@
     margin-bottom: 19px;
 
     @include bootstrap.tablet {
-      margin-bottom: 65px;
+      margin-bottom: 61px;
     }
 
     @include bootstrap.desktop {
@@ -146,12 +148,16 @@
   margin-right: 13px;
 
   @include bootstrap.tablet {
-    margin-right: 20px;
+    margin-right: 23px;
   }
 }
 
 .program-selection__field--cat-owner .program-selection__input {
   padding: 14px 14px 11px 14px;
+
+  @include bootstrap.tablet {
+    padding: 12px 19px 10px 19px;
+  }
 }
 
 .program-selection__field--cat-owner .program-selection__contacts-wrapper {
@@ -416,6 +422,11 @@
     text-transform: uppercase;
     color: #444444;
     opacity: 1;
+
+    @include bootstrap.tablet {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &:hover {
@@ -445,12 +456,21 @@
 
 .program-selection__label-required {
   margin-top: 1px;
+  font-size: 14px;
+
+  @include bootstrap.tablet {
+    font-size: 16px;
+  }
 }
 
 .program-selection__input-img {
   position: absolute;
   right: 15px;
   stroke: #222222;
+
+  @include bootstrap.tablet {
+    right: 17px;
+  }
 }
 
 
@@ -492,6 +512,11 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+
+  @include bootstrap.tablet {
+    padding-left: 18px;
+    padding-bottom: 37px;
+  }
 
   &::placeholder {
     font-family: bootstrap.$font-oswald;
@@ -536,6 +561,10 @@
     margin-bottom: 0;
     margin-right: 64px;
     max-width: 282px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 
   @include bootstrap.desktop {
@@ -553,5 +582,6 @@
 
   @include bootstrap.tablet {
     font-size: 16px;
+    margin-top: -5px;
   }
 }
