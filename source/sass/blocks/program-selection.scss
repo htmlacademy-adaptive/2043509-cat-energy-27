@@ -109,7 +109,7 @@
   }
 
   &--cat-owner {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
 
     @include bootstrap.tablet {
       margin-bottom: 65px;
@@ -154,10 +154,10 @@
 }
 
 .program-selection__field--cat-owner .program-selection__input {
-  padding: 14px 14px 11px 14px;
+  padding: 14px 44px 11px 14px;
 
   @include bootstrap.tablet {
-    padding: 12px 19px 10px 19px;
+    padding: 12px 44px 10px 19px;
   }
 
   @include bootstrap.desktop {
@@ -173,6 +173,7 @@
     grid-template-columns: repeat(2, minmax(min-content, 569px));
     column-gap: 80px;
     padding-bottom: 1px;
+    align-items: start;
   }
 }
 
@@ -404,7 +405,12 @@
 .program-selection__label-text {
   margin-right: 16px;
   display: flex;
-  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 100px;
+
+  @include bootstrap.tablet {
+    max-width: 150px;
+  }
 }
 
 .program-selection__input {
@@ -510,6 +516,10 @@
 
 .program-selection__control:disabled ~ span {
   opacity: 0.3;
+}
+
+.program-selection__contacts-wrapper {
+  padding-bottom: 1px;
 }
 
 .program-selection__text-area {
