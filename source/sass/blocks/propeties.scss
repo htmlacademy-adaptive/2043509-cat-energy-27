@@ -16,6 +16,7 @@
 
   @include bootstrap.desktop {
     border-bottom: none;
+    padding-bottom: 71px;
   }
 }
 
@@ -52,7 +53,7 @@
 
   @include bootstrap.desktop {
     grid-template-columns: repeat(auto-fit, minmax(237px, max-content));
-    column-gap: 7.2%;
+    column-gap: 7%;
     margin: 0 auto;
   }
 }

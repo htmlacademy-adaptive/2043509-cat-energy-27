@@ -5,7 +5,7 @@
   background-color: transparent;
 
   @include bootstrap.desktop {
-    padding: 7px 0 0 52px;
+    padding-top: 7px;
     justify-self: end;
   }
 }
@@ -42,6 +42,12 @@
 
     &:last-child {
       margin-left: 37px;
+    }
+  }
+
+  @include bootstrap.desktop {
+    &:last-child {
+      margin-left: 33px;
     }
   }
 
