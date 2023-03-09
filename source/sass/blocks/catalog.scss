@@ -9,6 +9,10 @@
   @include bootstrap.tablet {
     padding-bottom: 76px;
   }
+
+  @include bootstrap.desktop {
+    padding-bottom: 86px;
+  }
 }
 
 .catalog__main-products {
@@ -422,8 +426,10 @@
   @include bootstrap.desktop {
     border-right: none;
     border-left: none;
-    padding: 15px 0 17px 0;
-    display: flex;
+    padding: 14px 0 17px 0;
+    display: grid;
+    grid-template-columns: 1fr 244px;
+    column-gap: 40px;
   }
 }
 
@@ -481,9 +487,14 @@
     line-height: 20px;
     padding-top: 2px;
     display: grid;
-    grid-template-columns: 1fr 60px;
+    grid-template-columns: 1fr 43px;
     justify-items: end;
-    column-gap: 33px;
+    column-gap: 50px;
+  }
+
+  @include bootstrap.desktop {
+    padding-top: 5px;
+    justify-items: stretch;
   }
 }
 
@@ -492,15 +503,15 @@
     margin-left: 0;
     margin-right: 2px;
   }
+
+  @include bootstrap.desktop {
+    justify-self: start;
+  }
 }
 
 .catalog__additional-button {
   font-size: 16px;
   line-height: 20px;
-
-  @include bootstrap.desktop {
-    width: 244px;
-  }
 }
 
 .catalog__gift-wrapper {

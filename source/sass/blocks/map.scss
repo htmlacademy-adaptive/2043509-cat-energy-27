@@ -17,6 +17,24 @@
       background-color: #ffffff;
     }
   }
+
+  & .contacts {
+    @include bootstrap.desktop {
+      padding: 59px 109px 44px 80px;
+    }
+  }
+
+  & .contacts__address {
+    @include bootstrap.desktop {
+      max-width: 126px;
+    }
+  }
+
+  & .contacts__street {
+    @include bootstrap.desktop {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .map__image-wrapper {
