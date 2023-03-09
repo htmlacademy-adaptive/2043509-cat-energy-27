@@ -1,0 +1,88 @@
+@use "../global/bootstrap.scss";
+
+.example {
+  background-color: bootstrap.$color-grey;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include bootstrap.tablet {
+    position: relative;
+    padding: 0 0 718px 0;
+    background-color: transparent;
+    background-image: linear-gradient(to top, #eaeaea, #eaeaea 462px, #ffffff 462px, #ffffff 100%);
+  }
+
+  @include bootstrap.desktop {
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+.example__title {
+  font-family: bootstrap.$font-oswald;
+  padding-top: 25px;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+  max-width: 280px;
+
+  @include bootstrap.tablet {
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 500px;
+    margin-bottom: 63px;
+    padding-top: 43px;
+    padding-bottom: 0;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 600px;
+    padding-top: 0;
+    margin-bottom: 76px;
+  }
+}
+
+.example__wrapper {
+  width: 100%;
+  margin: 0 0 20px 0;
+
+  @include bootstrap.tablet {
+    margin: 0;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 100%;
+    padding-top: 70px;
+    padding-bottom: 75px;
+    margin: 0;
+    background-color: bootstrap.$color-grey;
+
+    & .container {
+      position: relative;
+    }
+  }
+}
+
+.example__description {
+  font-family: bootstrap.$font-lato;
+  font-weight: 400;
+  color: #444444;
+  margin: 0 0 20px 0;
+  max-width: 100%;
+
+  @include bootstrap.tablet {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 54px 0;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 432px;
+    margin: 0 0 69px 0;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../global/bootstrap.scss";
+
+.button {
+  font-family: bootstrap.$font-oswald;
+  background-color: bootstrap.$color-green;
+  padding: 10px 10px 10px 10px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

@@ -1,0 +1,59 @@
+@use "../global/bootstrap.scss";
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 20px;
+
+  @include bootstrap.tablet {
+    padding: 60px 70px;
+  }
+
+  @include bootstrap.desktop {
+    padding: 59px 75px 61px 80px;
+  }
+}
+
+.contacts__title {
+  font-family: bootstrap.$font-oswald;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 140px;
+  max-width: 140px;
+  color: #111111;
+  margin: 0;
+
+  @include bootstrap.tablet {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 171px;
+  }
+}
+
+.contacts__address {
+  font-family: bootstrap.$font-lato;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 160px;
+  color: #444444;
+  font-style: normal;
+
+  @include bootstrap.tablet {
+    text-align: right;
+    font-size: 16px;
+    margin-top: -5px;
+  }
+
+  @include bootstrap.desktop {
+    text-align: left;
+  }
+}
+
+.contacts__street {
+  @include bootstrap.tablet {
+    display: block;
+    margin-bottom: 19px;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../global/bootstrap.scss";
+
+.socials {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28px);
+  column-gap: 24px;
+  row-gap: 6px;
+  max-width: 210px;
+}
+
+.socials__link {
+  display: flex;
+  width: 28px;
+  height: 48px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+
+  &:hover {
+    color: bootstrap.$color-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

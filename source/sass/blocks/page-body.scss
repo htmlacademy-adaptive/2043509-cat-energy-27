@@ -1,0 +1,45 @@
+@use "../global/bootstrap.scss";
+
+.page-body {
+  color: #000000;
+  background-color: #ffffff;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.page-body__header-wrapper {
+  position: relative;
+  width: 100%;
+
+  @include bootstrap.desktop {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50vw;
+      height: auto;
+      min-height: 694px;
+      top: 0;
+      right: 0;
+      background-color: rgba(104, 183, 56, 0.85);
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: auto;
+      min-height: 694px;
+      width: 50vw;
+      z-index: 0;
+      background-image: url("../img/decoration-images/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+@use "../global/bootstrap.scss";
+
+.indicators {
+  @include bootstrap.tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include bootstrap.desktop {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 430px;
+  }
+}
+
+.indicators__list {
+  padding: 0;
+  margin: 0 0 33px 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 124px);
+  column-gap: 32px;
+
+  @include bootstrap.tablet {
+    grid-template-columns: repeat(2, 162px);
+    column-gap: 42px;
+    margin: 0;
+  }
+
+  @include bootstrap.desktop {
+    margin: 0 0 61px 0;
+  }
+}
+
+.indicators__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  position: relative;
+  padding: 14px 14px 17px 14px;
+}
+
+.indicators__term {
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+
+
+  @include bootstrap.tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.indicators__details {
+  position: absolute;
+  bottom: -14px;
+  font-family: bootstrap.$font-lato;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #444444;
+  max-width: 80px;
+  text-align: center;
+  margin: 0;
+  background-color: bootstrap.$color-grey;
+  z-index: 2;
+  padding: 0 10px 0 10px;
+
+  @include bootstrap.tablet {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 145px;
+    padding: 0 8px 0 10px;
+    background-color: #ffffff;
+    bottom: -6px;
+  }
+
+  @include bootstrap.desktop {
+    background-color: bootstrap.$color-grey;
+  }
+}
+
+.indicators__summary {
+  font-family: bootstrap.$font-oswald;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 2px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  @include bootstrap.tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    max-width: 176px;
+    padding-left: 0;
+    margin: 10px 0 0 0;
+  }
+
+  @include bootstrap.desktop {
+    flex-direction: row;
+    max-width: 440px;
+    margin: 0;
+  }
+}
+
+.indicators__cost {
+  max-width: 200px;
+
+  @include bootstrap.tablet {
+    margin: 0 0 9px 0;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 440px;
+    margin: 0 63px 0 0;
+  }
+}
+
+.indicators__price {
+  max-width: 100px;
+}

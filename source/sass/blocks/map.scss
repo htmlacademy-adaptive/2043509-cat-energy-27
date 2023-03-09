@@ -1,0 +1,93 @@
+@use "../global/bootstrap.scss";
+
+.map {
+  position: relative;
+  display: grid;
+
+  @include bootstrap.desktop {
+    grid-template-columns: 1fr minmax(1024px, 1440px) 1fr;
+  }
+}
+
+.map--not-index {
+  & .map__contacts {
+    background-color: bootstrap.$color-grey;
+
+    @include bootstrap.desktop {
+      background-color: #ffffff;
+    }
+  }
+
+  & .contacts {
+    @include bootstrap.desktop {
+      padding: 59px 109px 44px 80px;
+    }
+  }
+
+  & .contacts__address {
+    @include bootstrap.desktop {
+      max-width: 126px;
+    }
+  }
+
+  & .contacts__street {
+    @include bootstrap.desktop {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.map__image-wrapper {
+  grid-column: 1/-1;
+  grid-row: 2/4;
+  height: 100%;
+  width: 100%;
+}
+
+.map__image {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+
+
+  @include bootstrap.tablet {
+    min-height: 400px;
+  }
+}
+
+.map__frame {
+  grid-column: 1/-1;
+  grid-row: 2/4;
+  display: flex;
+  width: 100%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+
+  @include bootstrap.tablet {
+    height: 400px;
+  }
+}
+
+.map__contacts-wrapper {
+  @include bootstrap.desktop {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    z-index: 5;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 198px;
+    height: auto;
+    pointer-events: none;
+  }
+}
+
+.map__contacts {
+  @include bootstrap.desktop {
+    max-width: 565px;
+    background-color: #ffffff;
+    margin: 95px 0 107px 7.64%;
+    padding: 56px 60px 56px 80px;
+    pointer-events: all;
+  }
+}

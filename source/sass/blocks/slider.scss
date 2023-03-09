@@ -1,0 +1,106 @@
+@use "../global/bootstrap.scss";
+
+.slider {
+  position: relative;
+  width: 280px;
+  height: 256px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+
+  @include bootstrap.tablet {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 560px;
+    height: 518px;
+  }
+
+  @include bootstrap.desktop {
+    bottom: 10px;
+    left: unset;
+    right: 41px;
+    transform: none;
+  }
+}
+
+.slider__img-wrapper {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+
+  &--slim-cat {
+    transform: scaleX(-1);
+
+    & .slider__image {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.slider__image {
+  display: flex;
+  vertical-align: middle;
+
+  @include bootstrap.tablet {
+    width: 560px;
+    height: 518px;
+  }
+}
+
+.slider__compare-button {
+  display: flex;
+  padding: 0;
+  position: absolute;
+  z-index: 9;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  color: #666666;
+  top: calc(256px / 2 - 40px / 2);
+  left: calc(280px / 2 - 40px / 2);
+
+  @include bootstrap.tablet {
+    top: 239px;
+    left: 260px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -110px;
+    left: 18px;
+    width: 4px;
+    height: 256px;
+    border-radius: 2px;
+    background-color: #666666;
+    z-index: -1;
+
+    @include bootstrap.tablet {
+      height: 518px;
+      top: -239px;
+    }
+  }
+
+  &:hover {
+
+    color: bootstrap.$color-green;
+
+    &::after {
+      background-color: bootstrap.$color-green;
+    }
+  }
+
+  &:active {
+    color: #5eaa2f;
+    opacity: 0.6;
+
+    &::after {
+      background-color: #5eaa2f;
+    }
+  }
+}

@@ -1,1 +1,21 @@
-// Начните писать стили здесь
+@use "./global/bootstrap.scss";
+@use "./global/container.scss";
+@use "./blocks/visually-hidden.scss";
+@use "./blocks/button.scss";
+@use "./blocks/page.scss";
+@use "./blocks/page-body.scss";
+@use "./blocks/header-main.scss";
+@use "./blocks/main-nav.scss";
+@use "./blocks/pop-up-menu.scss";
+@use "./blocks/main-footer.scss";
+@use "./blocks/socials.scss";
+@use "./blocks/map.scss";
+@use "./blocks/contacts.scss";
+@use "./blocks/propeties.scss";
+@use "./blocks/programs.scss";
+@use "./blocks/promo.scss";
+@use "./blocks/slider.scss";
+@use "./blocks/example.scss";
+@use "./blocks/indicators.scss";
+@use "./blocks/catalog.scss";
+@use "./blocks/program-selection.scss";

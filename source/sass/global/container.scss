@@ -1,0 +1,31 @@
+@use "../global/bootstrap.scss";
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1300px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include bootstrap.tablet {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @include bootstrap.desktop {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  &--form {
+    @include bootstrap.tablet {
+      padding-right: 67px;
+      padding-left: 70px;
+    }
+
+    @include bootstrap.desktop {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+}
