@@ -84,8 +84,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   width: 100%;
+
+  & .main-footer__copyrights-logo-img {
+    fill: #666666;
+  }
 
   @include bootstrap.tablet {
     width: 168px;

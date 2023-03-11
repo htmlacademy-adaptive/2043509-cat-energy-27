@@ -19,7 +19,7 @@
     padding-top: 52px;
     padding-bottom: 29px;
     display: grid;
-    grid-template-columns: repeat(2, 40% 60%);
+    grid-template-columns: repeat(2, 1fr);
     position: relative;
     z-index: 5;
     align-items: start;
@@ -31,6 +31,18 @@
 
     @include bootstrap.tablet {
       border-bottom: none;
+    }
+  }
+
+  &--no-js {
+    &.container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    & .header-main__logo-wrapper {
+      padding-right: 20px;
+      padding-left: 20px;
     }
   }
 }
