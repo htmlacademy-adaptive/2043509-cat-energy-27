@@ -102,17 +102,16 @@
 
   @include bootstrap.tablet {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     font-size: 20px;
     max-width: 176px;
     padding-left: 0;
-    margin: 10px 0 0 0;
+    margin: 0;
   }
 
   @include bootstrap.desktop {
     flex-direction: row;
     max-width: 440px;
-    margin: 0;
   }
 }
 

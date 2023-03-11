@@ -136,11 +136,12 @@
 .main-nav__toggle {
   position: absolute;
   top: 21px;
-  right: 22px;
+  right: 21px;
+  width: 24px;
+  background-image: url("../img/svg/close-menu.svg");
   background-color: inherit;
   background-repeat: no-repeat;
   background-position: center;
-  width: 20px;
   height: 20px;
   padding: 0;
   display: flex;
@@ -160,15 +161,11 @@
   }
 }
 
-.main-nav__toggle--open {
-  width: 24px;
+.main-nav__toggle.main-nav__toggle--close {
   right: 19px;
   top: 21px;
+  width: 24px;
   background-image: url("../img/svg/open-menu.svg");
-}
-
-.main-nav__toggle--close {
-  background-image: url("../img/svg/close-menu.svg");
 }
 
 .main-nav__toggle--no-js {
